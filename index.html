@@ -4,21 +4,62 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <style>body {font-family: sans-serif;}</style>
-  <title>peterhohk's GitHub Pages</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto Sans">
+  <script src="https://kit.fontawesome.com/59b21ce732.js" crossorigin="anonymous"></script>
+  <title>Peter Ho's Homepage</title>
 </head>
 
 
 <body>
 
-<h1>Welcome to peterhohk's GitHub Pages</h1>
-<p>(will maybe spruce up this page later)</p>
-<p>Select a destination:
-  <ul>
-    <li><a href="gallery/gallery.html">J-ColourS Gallery</a> -- Gallery page for my digital art series <strong>J-ColourS</strong>.</li>
-    <li><a href="lab/lab.html">HTMLab</a> -- Random stuff I made as practice for HTML, CSS and JS.</li>
-  </ul>
-</p>
+<div class="hero">
+  <img src="assets/banner_left.png" alt="Left banner" width="512" height="256" class="hero-bg left">
+  <div class="profile-card">
+    <img src="assets/avatar.png" alt="Peter Ho's avatar" width="256" height="256" class="avatar">
+    <span class="name">Peter Ho</span>
+    <span>self-taught web designer</span>
+    <span class="links">
+      <span class="tooltip">
+        <span class="tooltop-base"><a href="https://github.com/peterhohk" target="_blank"><i class="fa-brands fa-github"></i></a></span>
+        <span class="tooltip-text">GitHub</span>
+      </span>
+      <span class="tooltip">
+        <span class="tooltop-base"><a href="javascript:void(0)" target="_blank"><i class="fa-brands fa-linkedin"></i></a></span>
+        <span class="tooltip-text">LinkedIn (coming soon!)</span>
+      </span>
+    </span>
+  </div>
+  <img src="assets/banner_right.png" alt="Right banner" width="512" height="256" class="hero-bg right">
+</div>
+
+<div class="projects">
+  <div class="projects-header">personal projects</div>
+  <div class="projects-content">
+    <a href="gallery/gallery.html" class="project-card">
+      <img src="assets/thumb_gallery.png" alt="J-ColourS Gallery thumbnail" width="128" height="128">
+      <div class="project-desc">
+        <span class="project-name">J-ColourS Gallery</span>
+        <span class="project-desc">Gallery page for my digital art series <strong>J-ColourS</strong>.</span>
+        <ul class="tagcloud">
+          <li>html-css-js</li>
+          <li>jquery</li>
+        </ul>
+      </div>
+    </a>
+    <a href="lab/lab.html" class="project-card">
+      <img src="assets/thumb_lab.png" alt="HTMLab Gallery thumbnail" width="128" height="128">
+      <div class="project-desc">
+        <span class="project-name">HTMLab</span>
+        <span class="project-desc">Random stuff I made as practice for HTML, CSS and JS.</span>
+        <ul class="tagcloud">
+          <li>html-css-js</li>
+          <li>jquery</li>
+        </ul>
+      </div>
+    </a>
+  </div>
+</div>
 
 </body>
 
