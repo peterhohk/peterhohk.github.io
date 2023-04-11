@@ -171,8 +171,8 @@ ul, ol {
   position: relative;
   margin: auto;
   max-width: 384px;
-  padding: 0.5em;
-  border-radius: 1em 1em 0 0;
+  padding: 0.5em 0 1em;
+  border-radius: 1em;
   background-color: var(--blue2);
   text-align: center;
   text-transform: uppercase;
@@ -182,7 +182,7 @@ ul, ol {
   content: "";
   position: absolute;
   inset: 0;
-  margin: auto auto 0 auto;
+  margin: auto auto 0.25em auto;
   border-left: 0.5em solid transparent;
   border-right: 0.5em solid transparent;
   border-top: 0.5em solid var(--blue7);
@@ -196,21 +196,20 @@ ul, ol {
   gap: 1em;
   padding: 1em;
   overflow-y: auto;
-  background-color: var(--blue2);
 }
 a.project-card {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 0.5em;
-  background-color: var(--blue3);
+  background-color: var(--blue2);
   border-radius: 1em;
-  box-shadow: 0 4px var(--blue5);
+  box-shadow: 0 4px var(--blue4);
   color: var(--blue7);
   transition: background-color 0.4s;
 }
 .project-card:hover, .project-card:focus-visible {
-  background-color: var(--blue4);
+  background-color: var(--blue3);
 }
 .project-card img {
   width: 128px;
