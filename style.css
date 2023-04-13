@@ -36,7 +36,6 @@ body {
   grid-template-rows: auto;
   align-items: end;
   gap: 1em;
-  margin: 0;
   padding-top: 1em;
   min-height: 100vh;
   background-color: var(--green1);
@@ -59,9 +58,6 @@ a:where(:link, :visited) {
 }
 a:where(:hover, :focus-visible) {
   color: var(--green7);
-}
-ul, ol {
-  margin: 0;
 }
 
 /* GENERAL STYLE ENDS */
