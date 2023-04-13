@@ -29,6 +29,7 @@
 
 *, *::before, *::after {
   box-sizing: border-box;
+  margin: 0;
 }
 body {
   display: grid;
@@ -67,7 +68,7 @@ ul, ol {
 
 /* HERO STYLE STARTS */
 
-.hero {
+header {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -83,7 +84,7 @@ ul, ol {
   background-position: 0 0, calc(var(--bg-size)/2) calc(var(--bg-size)/2);
   animation: bg-animate 1s linear infinite;
 }
-.hero > * {
+header > * {
   flex: 0 0 auto;
 }
 .hero-bg {
@@ -99,7 +100,7 @@ ul, ol {
 .hero-bg.right {
   object-position: left;
 }
-:is(.hero:hover, .hero:focus-within) .hero-bg {
+header:is(:hover, :focus-within) .hero-bg {
   opacity: 1;
 }
 .profile-card {
@@ -110,17 +111,13 @@ ul, ol {
   box-shadow: 0 4px var(--blue5);
   text-align: center;
 }
-.profile-card > span {
-  display: block;
-}
 .avatar {
   margin: -1em auto;
   width: 256px;
   min-height: 256px;
 }
-.name {
+h1 {
   font-size: 2rem;
-  font-weight: bold;
 }
 .links {
   font-size: 1.5rem;
@@ -156,26 +153,28 @@ ul, ol {
   width: 0;
   height: 0;
 }
-:is(.tooltip:hover, .tooltip:focus-within) .tooltip-text {
+.tooltip:is(:hover, :focus-within) .tooltip-text {
   visibility: visible;
   opacity: 1;
 }
 
 /* HERO STYLE ENDS */
 
-/* PROJECTS STYLE STARTS */
+/* CONTENT STYLE STARTS */
 
-.projects-header {
+h2 {
   position: relative;
   margin: auto;
-  max-width: 384px;
+  max-width: 256px;
   padding: 0.5em 0 1em;
   border-radius: 1em;
   background-color: var(--blue2);
+  font-size: 1rem;
+  font-weight: normal;
   text-align: center;
   text-transform: uppercase;
 }
-.projects-header::after {
+h2::after {
   display: block;
   content: "";
   position: absolute;
@@ -187,6 +186,14 @@ ul, ol {
   width: 0;
   height: 0;
 }
+h3 {
+  font-size: 1.5rem;
+}
+
+/* CONTENT STYLE ENDS */
+
+/* PROJECTS STYLE STARTS */
+
 .projects-content {
   display: grid;
   grid-template-columns: repeat(auto-fit, 256px);
@@ -206,7 +213,7 @@ ul, ol {
   color: var(--blue7);
   transition: background-color 0.4s;
 }
-.project-card:hover, .project-card:focus-visible {
+.project-card:is(:hover, :focus-visible) {
   background-color: var(--blue3);
 }
 .project-card img {
@@ -217,13 +224,6 @@ ul, ol {
 }
 .project-desc {
   text-align: center;
-}
-.project-desc > span {
-  display: block;
-}
-.project-name {
-  font-size: 1.5rem;
-  font-weight: bold;
 }
 .tagcloud {
   padding: 0;
