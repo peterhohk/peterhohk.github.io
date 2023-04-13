@@ -52,11 +52,11 @@ img {
   max-width: 100%;
   max-height: 100%;
 }
-a:link, a:visited {
+a:where(:link, :visited) {
   text-decoration: none;
   color: var(--blue5);
 }
-a:hover, a:focus-visible {
+a:where(:hover, :focus-visible) {
   color: var(--green7);
 }
 ul, ol {
@@ -195,7 +195,7 @@ ul, ol {
   padding: 1em;
   overflow-y: auto;
 }
-a.project-card {
+.project-card {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -239,7 +239,7 @@ a.project-card {
   .projects-content {
     grid-template-columns: 100%;
   }
-  a.project-card {
+  .project-card {
     flex-direction: row;
     align-items: flex-start;
     gap: 0.5em;
