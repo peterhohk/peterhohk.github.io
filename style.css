@@ -20,6 +20,10 @@
   --blue9: hsl(225 80% 2%);
   font-size: 16px;
 }
+@keyframes bg-animate {
+  from {background-position: 0 0, calc(var(--bg-size)/2) calc(var(--bg-size)/2);}
+  to   {background-position: var(--bg-size) var(--bg-size), calc(var(--bg-size)*3/2) calc(var(--bg-size)*3/2);}
+}
 
 /* GENERAL STYLE STARTS */
 
@@ -74,6 +78,7 @@ header {
     radial-gradient(var(--blue3) 0% 12.5%, transparent 12.5% 100%);
   background-size: var(--bg-size) var(--bg-size);
   background-position: 0 0, calc(var(--bg-size)/2) calc(var(--bg-size)/2);
+  animation: bg-animate 1s linear infinite;
 }
 header > * {
   flex: 0 0 auto;
@@ -83,7 +88,7 @@ header > * {
   height: 256px;
   object-fit: cover;
   opacity: 0.1;
-  transition: opacity 0.4s, filter 0.4s;
+  transition: opacity 0.4s;
 }
 .hero-bg.left {
   object-position: right;
@@ -93,7 +98,6 @@ header > * {
 }
 header:is(:hover, :focus-within) .hero-bg {
   opacity: 1;
-  filter: drop-shadow(0 1px 1px var(--blue5));
 }
 .profile-card {
   width: 256px;
