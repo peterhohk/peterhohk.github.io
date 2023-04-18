@@ -111,7 +111,7 @@ header:is(:hover, :focus-within) .hero-bg {
 .avatar {
   margin: -1em auto;
   width: 256px;
-  min-height: 256px;
+  height: 256px;
 }
 h1 {
   font-size: 2rem;
@@ -153,6 +153,26 @@ h1 {
 .tooltip:is(:hover, :focus-within) .tooltip-text {
   visibility: visible;
   opacity: 1;
+}
+@media screen and (max-width: 600px) {
+  header {
+    flex-direction: column;
+  }
+  .hero-bg {
+    width: 100%;
+    height: auto;
+  }
+  .profile-card {
+    display: flex;
+    width: auto;
+  }
+  .avatar {
+    width: 128px;
+    height: 128px;
+  }
+  .profile-content {
+    text-align: left;
+  }
 }
 
 /* HERO STYLE ENDS */
