@@ -31,8 +31,8 @@ body {
   display: grid;
   grid-template-rows: auto;
   align-items: end;
-  gap: 1em;
-  padding-top: 1em;
+  gap: 1rem;
+  padding-top: 1rem;
   min-height: 100vh;
   background-color: var(--green1);
   color: var(--blue7);
@@ -64,9 +64,9 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0.25em;
+  gap: 0.25rem;
   overflow: clip;
-  padding: 1em 0;
+  padding: 1rem 0;
   background-color: var(--blue2);
 }
 header > * {
@@ -91,14 +91,14 @@ header:is(:hover, :focus-within) .hero-bg {
 }
 .profile-card {
   width: 256px;
-  padding: 0.5em;
+  padding: 0.5rem;
   background-color: var(--blue3);
-  border-radius: 1em;
+  border-radius: 1rem;
   box-shadow: 0 4px var(--blue5);
   text-align: center;
 }
 .avatar {
-  margin: -1em auto;
+  margin: -1rem auto;
   width: 256px;
   height: 256px;
 }
@@ -116,7 +116,7 @@ h1 {
   visibility: hidden;
   opacity: 0;
   position: absolute;
-  bottom: calc(100% + 4px);
+  bottom: calc(100% + 0.25em);
   left: 50%;
   translate: -50%;
   padding: 0.5em 1em;
@@ -133,9 +133,9 @@ h1 {
   position: absolute;
   inset: 100% 0 0 0;
   margin: 0 auto;
-  border-left: 4px solid transparent;
-  border-right: 4px solid transparent;
-  border-top: 6px solid var(--blue7);
+  border-left: 0.375em solid transparent;
+  border-right: 0.375em solid transparent;
+  border-top: 0.5em solid var(--blue7);
   width: 0;
   height: 0;
 }
@@ -172,8 +172,8 @@ h2 {
   position: relative;
   margin: auto;
   max-width: 256px;
-  padding: 0.5em 0 1em;
-  border-radius: 1em;
+  padding: 0.5rem 0 1rem;
+  border-radius: 1rem;
   background-color: var(--blue2);
   font-size: 1rem;
   font-weight: normal;
@@ -185,10 +185,10 @@ h2::after {
   content: "";
   position: absolute;
   inset: 0;
-  margin: auto auto 0.5em auto;
-  border-left: 0.5em solid transparent;
-  border-right: 0.5em solid transparent;
-  border-top: 0.5em solid var(--blue7);
+  margin: auto auto 0.5rem auto;
+  border-left: 0.5rem solid transparent;
+  border-right: 0.5rem solid transparent;
+  border-top: 0.5rem solid var(--blue7);
   width: 0;
   height: 0;
 }
@@ -204,17 +204,17 @@ h3 {
   display: grid;
   grid-template-columns: repeat(auto-fit, 256px);
   justify-content: center;
-  gap: 1em;
-  padding: 1em;
+  gap: 1rem;
+  padding: 1rem;
   overflow-y: auto;
 }
 .project-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0.5em;
+  padding: 0.5rem;
   background-color: var(--blue2);
-  border-radius: 1em;
+  border-radius: 1rem;
   box-shadow: 0 4px var(--blue4);
   color: var(--blue7);
   transition: background-color 0.4s;
@@ -226,7 +226,7 @@ h3 {
   width: 128px;
   height: 128px;
   border: 2px solid;
-  border-radius: 1em;
+  border-radius: 1rem;
 }
 .project-desc {
   text-align: center;
@@ -237,13 +237,13 @@ h3 {
   justify-content: center;
   gap: 0.25em;
   padding: 0;
+  font-size: 0.75em;
 }
 .tagcloud li {
   display: inline;
   padding: 0.125em 0.5em;
   border: 1px solid;
   border-radius: 1em;
-  font-size: 0.75em;
 }
 @media screen and (max-width: 600px) {
   .projects-content {
@@ -252,7 +252,7 @@ h3 {
   .project-card {
     flex-direction: row;
     align-items: flex-start;
-    gap: 0.5em;
+    gap: 0.5rem;
   }
   .project-desc {
     text-align: left;
