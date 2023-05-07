@@ -26,6 +26,7 @@
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
+  padding: 0;
 }
 body {
   display: grid;
@@ -172,8 +173,8 @@ h1 {
 h2 {
   position: relative;
   margin: auto;
-  max-width: 256px;
-  padding: 0.5rem 0 1rem;
+  max-width: 384px;
+  padding: 0.5rem 0.5rem 1rem;
   border-radius: 1rem;
   background-color: var(--blue2);
   font-size: 1rem;
@@ -218,10 +219,11 @@ h3 {
   border-radius: 1rem;
   box-shadow: 0 4px var(--blue4);
   color: var(--blue7);
-  transition: background-color 0.4s;
+  transition: background-color 0.4s, box-shadow 0.4s;
 }
 .project-card:is(:hover, :focus-visible) {
   background-color: var(--blue3);
+  box-shadow: 0 4px var(--blue5);
 }
 .project-card img {
   width: 128px;
@@ -237,7 +239,6 @@ h3 {
   flex-wrap: wrap;
   justify-content: center;
   gap: 0.25em;
-  padding: 0;
   font-size: 0.75em;
 }
 .tagcloud li {
