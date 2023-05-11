@@ -178,6 +178,7 @@ h2 {
   font-weight: normal;
   text-align: center;
   text-transform: uppercase;
+  box-shadow: 0 4px var(--blue4);
 }
 h2::after {
   display: block;
