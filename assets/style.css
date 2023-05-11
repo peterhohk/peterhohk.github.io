@@ -31,15 +31,12 @@
 body {
   display: grid;
   grid-template-rows: auto;
-  align-items: end;
   gap: 1rem;
-  padding-top: 1rem;
-  min-height: 100vh;
+  margin-block: 1rem;
   background-color: var(--green1);
   color: var(--blue7);
   font-family: "Noto Sans", Helvetica, Arial, sans-serif;
   line-height: 1.5;
-  letter-spacing: 0.0625ch;
 }
 img {
   display: block;
@@ -172,7 +169,7 @@ h1 {
 
 h2 {
   position: relative;
-  margin: auto;
+  margin: 0 auto 1rem;
   max-width: 384px;
   padding: 0.5rem 0.5rem 1rem;
   border-radius: 1rem;
@@ -207,7 +204,7 @@ h3 {
   grid-template-columns: repeat(auto-fit, 16rem);
   justify-content: center;
   gap: 1rem;
-  padding: 1rem;
+  margin-inline: 0.5rem;
 }
 .project-card {
   display: flex;
