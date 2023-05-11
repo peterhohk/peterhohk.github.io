@@ -74,8 +74,8 @@ header > * {
   flex: 0 0 auto;
 }
 .hero-bg {
-  width: 512px;
-  height: 256px;
+  width: 32rem;
+  height: 16rem;
   object-fit: cover;
   opacity: 0.1;
   transition: opacity 0.4s, filter 0.4s;
@@ -91,7 +91,7 @@ header:is(:hover, :focus-within) .hero-bg {
   filter: drop-shadow(0 1px 1px var(--blue5));
 }
 .profile-card {
-  width: 256px;
+  width: 16rem;
   padding: 0.5rem;
   background-color: var(--blue3);
   border-radius: 1rem;
@@ -100,8 +100,8 @@ header:is(:hover, :focus-within) .hero-bg {
 }
 .avatar {
   margin: -1rem auto;
-  width: 256px;
-  height: 256px;
+  width: 16rem;
+  height: 16rem;
 }
 h1 {
   font-size: 2rem;
@@ -204,11 +204,10 @@ h3 {
 
 .projects-content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 256px);
+  grid-template-columns: repeat(auto-fit, 16rem);
   justify-content: center;
   gap: 1rem;
   padding: 1rem;
-  overflow-y: auto;
 }
 .project-card {
   display: flex;
@@ -239,6 +238,7 @@ h3 {
   flex-wrap: wrap;
   justify-content: center;
   gap: 0.25em;
+  margin-block: 0.5em;
   font-size: 0.75em;
 }
 .tagcloud li {
