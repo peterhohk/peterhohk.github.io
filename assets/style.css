@@ -34,6 +34,7 @@ body {
   gap: 1rem;
   margin-block: 1rem;
   background-color: var(--green1);
+  text-align: center;
   color: var(--blue7);
   font-family: "Noto Sans", Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -93,7 +94,6 @@ header:is(:hover, :focus-within) .hero-bg {
   background-color: var(--blue3);
   border-radius: 1rem;
   box-shadow: 0 4px var(--blue5);
-  text-align: center;
 }
 .avatar {
   margin: -1rem auto;
@@ -176,7 +176,6 @@ h2 {
   background-color: var(--blue2);
   font-size: 1rem;
   font-weight: normal;
-  text-align: center;
   text-transform: uppercase;
   box-shadow: 0 4px var(--blue4);
 }
@@ -227,9 +226,6 @@ h3 {
   height: 128px;
   border: 2px solid;
   border-radius: 1rem;
-}
-.project-desc {
-  text-align: center;
 }
 .tagcloud {
   display: flex;
