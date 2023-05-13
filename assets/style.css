@@ -34,7 +34,7 @@ body {
   gap: 1rem;
   margin-block: 1rem;
   background-color: var(--green1);
-  text-align: center;
+  text-align: left;
   color: var(--blue7);
   font-family: "Noto Sans", Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -54,6 +54,11 @@ a:where(:link, :visited) {
 a:where(:hover, :focus-visible) {
   color: var(--green7);
 }
+@media screen and (min-width: 600px) {
+  body {
+    text-align: center;
+  }
+}
 
 /* GENERAL STYLE ENDS */
 
@@ -61,6 +66,7 @@ a:where(:hover, :focus-visible) {
 
 header {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 0.25rem;
@@ -72,8 +78,8 @@ header > * {
   flex: 0 0 auto;
 }
 .hero-bg {
-  width: 32rem;
-  height: 16rem;
+  width: 100%;
+  height: auto;
   object-fit: cover;
   opacity: 0.1;
   transition: opacity 0.4s, filter 0.4s;
@@ -89,7 +95,9 @@ header:is(:hover, :focus-within) .hero-bg {
   filter: drop-shadow(0 1px 1px var(--blue5));
 }
 .profile-card {
-  width: 16rem;
+  display: flex;
+  align-items: center;
+  width: 24rem;
   padding: 0.5rem;
   background-color: var(--blue3);
   border-radius: 1rem;
@@ -97,8 +105,8 @@ header:is(:hover, :focus-within) .hero-bg {
 }
 .avatar {
   margin: -1rem auto;
-  width: 16rem;
-  height: 16rem;
+    width: 8rem;
+    height: 8rem;
 }
 h1 {
   font-size: 2rem;
@@ -141,25 +149,21 @@ h1 {
   visibility: visible;
   opacity: 1;
 }
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 600px) {
   header {
-    flex-direction: column;
+    flex-direction: row;
   }
   .hero-bg {
-    width: 100%;
-    height: auto;
+    width: 32rem;
+    height: 16rem;
   }
   .profile-card {
-    display: flex;
-    align-items: center;
-    width: 384px;
+    flex-direction: column;
+    width: 16rem;
   }
   .avatar {
-    width: 128px;
-    height: 128px;
-  }
-  .profile-content {
-    text-align: left;
+    width: 16rem;
+    height: 16rem;
   }
 }
 
@@ -170,10 +174,11 @@ h1 {
 h2 {
   position: relative;
   margin: 0 auto 1rem;
-  max-width: 384px;
+  max-width: 24rem;
   padding: 0.5rem 0.5rem 1rem;
   border-radius: 1rem;
   background-color: var(--blue2);
+  text-align: center;
   font-size: 1rem;
   font-weight: normal;
   text-transform: uppercase;
@@ -201,15 +206,16 @@ h3 {
 
 .projects-content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 16rem);
+  grid-template-columns: 1fr;
   justify-content: center;
   gap: 1rem;
   margin-inline: 0.5rem;
 }
 .project-card {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 0.5rem;
   padding: 0.5rem;
   background-color: var(--blue2);
   border-radius: 1rem;
@@ -222,15 +228,15 @@ h3 {
   box-shadow: 0 4px var(--blue5);
 }
 .project-card img {
-  width: 128px;
-  height: 128px;
+  width: 8rem;
+  height: 8rem;
   border: 2px solid;
   border-radius: 1rem;
 }
 .tagcloud {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 0.25em;
   margin-block: 0.5em;
   font-size: 0.75em;
@@ -241,21 +247,26 @@ h3 {
   border: 1px solid;
   border-radius: 1em;
 }
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 600px) {
   .projects-content {
-    grid-template-columns: 100%;
+    grid-template-columns: repeat(auto-fit, 16rem);
   }
   .project-card {
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 0.5rem;
-  }
-  .project-desc {
-    text-align: left;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
   }
   .tagcloud {
-    justify-content: flex-start;
+    justify-content: center;
   }
 }
 
 /* PROJECTS STYLE ENDS */
+
+/* FOOTER STYLE STARTS */
+
+footer {
+  text-align: center;
+}
+
+/* FOOTER STYLE ENDS */
