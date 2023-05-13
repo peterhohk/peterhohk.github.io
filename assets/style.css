@@ -78,17 +78,8 @@ header > * {
   flex: 0 0 auto;
 }
 .hero-bg {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
   opacity: 0.1;
   transition: opacity 0.4s, filter 0.4s;
-}
-.hero-bg.left {
-  object-position: right;
-}
-.hero-bg.right {
-  object-position: left;
 }
 header:is(:hover, :focus-within) .hero-bg {
   opacity: 1;
@@ -172,10 +163,9 @@ h1 {
 /* CONTENT STYLE STARTS */
 
 h2 {
-  position: relative;
   margin: 0 auto 1rem;
   max-width: 24rem;
-  padding: 0.5rem 0.5rem 1rem;
+  padding: 0.5rem;
   border-radius: 1rem;
   background-color: var(--blue2);
   text-align: center;
@@ -187,11 +177,8 @@ h2 {
 h2::after {
   display: block;
   content: "";
-  position: absolute;
-  inset: 0;
-  margin: auto auto 0.5rem auto;
-  border-left: 0.5rem solid transparent;
-  border-right: 0.5rem solid transparent;
+  margin: auto;
+  border-inline: 0.5rem solid transparent;
   border-top: 0.5rem solid var(--blue7);
   width: 0;
   height: 0;
@@ -213,8 +200,6 @@ h3 {
 }
 .project-card {
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
   gap: 0.5rem;
   padding: 0.5rem;
   background-color: var(--blue2);
@@ -236,7 +221,6 @@ h3 {
 .tagcloud {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
   gap: 0.25em;
   margin-block: 0.5em;
   font-size: 0.75em;
