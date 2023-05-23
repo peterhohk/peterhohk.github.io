@@ -1,4 +1,22 @@
 @charset "utf-8";
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+img {
+  display: block;
+  object-fit: contain;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* RESET ENDS */
+
+/* GENERAL STYLE STARTS */
+
 :root {
   --green1: hsl(120 60% 98%);
   --green2: hsl(120 60% 92%);
@@ -20,14 +38,6 @@
   --blue9: hsl(225 80% 2%);
   font-size: 16px;
 }
-
-/* GENERAL STYLE STARTS */
-
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
 body {
   display: grid;
   grid-template-rows: auto;
@@ -38,14 +48,6 @@ body {
   color: var(--blue7);
   font-family: "Noto Sans", Helvetica, Arial, sans-serif;
   line-height: 1.5;
-}
-img {
-  display: block;
-  object-fit: contain;
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  max-height: 100%;
 }
 a:where(:link, :visited) {
   text-decoration: none;
