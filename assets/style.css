@@ -18,42 +18,30 @@ img {
 /* GENERAL STYLE STARTS */
 
 :root {
-  --green1: hsl(120 60% 98%);
-  --green2: hsl(120 60% 92%);
-  --green3: hsl(120 60% 82%);
-  --green4: hsl(120 60% 68%);
-  --green5: hsl(120 60% 50%);
-  --green6: hsl(120 60% 32%);
-  --green7: hsl(120 60% 18%);
-  --green8: hsl(120 60% 8%);
-  --green9: hsl(120 60% 2%);
-  --blue1: hsl(225 80% 98%);
-  --blue2: hsl(225 80% 92%);
-  --blue3: hsl(225 80% 82%);
-  --blue4: hsl(225 80% 68%);
-  --blue5: hsl(225 80% 50%);
-  --blue6: hsl(225 80% 32%);
-  --blue7: hsl(225 80% 18%);
-  --blue8: hsl(225 80% 8%);
-  --blue9: hsl(225 80% 2%);
+  --off-white: hsl(210 90% 98%);
+  --light-blue: hsl(210 90% 82%);
+  --blue: hsl(225 90% 32%);
+  --dark-blue: hsl(240 90% 18%);
+  --light-green: hsl(120 60% 82%);
+  --green: hsl(120 60% 32%);
+  --bshadow: 0 4px var(--blue);
   font-size: 16px;
 }
 body {
   display: grid;
   gap: 1rem;
   margin-block: 1rem;
-  background-color: var(--green1);
-  text-align: left;
-  color: var(--blue7);
+  background-color: var(--off-white);
+  color: var(--dark-blue);
   font-family: "Noto Sans", Helvetica, Arial, sans-serif;
   line-height: 1.5;
 }
 a:where(:link, :visited) {
   text-decoration: none;
-  color: var(--blue5);
+  color: var(--blue);
 }
 a:where(:hover, :focus-visible) {
-  color: var(--green8);
+  color: var(--green);
 }
 @media screen and (min-width: 600px) {
   body {
@@ -73,27 +61,27 @@ header {
   gap: 0.25rem;
   overflow: clip;
   padding: 1rem 0;
-  background-color: var(--blue2);
+  background-color: color-mix(in srgb, var(--light-blue) 30%, transparent);
 }
 header > * {
   flex: 0 0 auto;
 }
 .hero-bg {
-  opacity: 0.1;
-  transition: opacity 0.4s, filter 0.4s;
+  opacity: 0;
+  filter: drop-shadow(2px 2px 0 var(--light-blue));
+  transition: opacity 0.4s;
 }
 header:is(:hover, :focus-within) .hero-bg {
   opacity: 1;
-  filter: drop-shadow(0 1px 1px var(--blue5));
 }
 .profile-card {
   display: flex;
   align-items: center;
   width: 24rem;
   padding: 0.5rem;
-  background-color: var(--blue3);
+  background-color: var(--light-blue);
   border-radius: 1rem;
-  box-shadow: 0 4px var(--blue5);
+  box-shadow: var(--bshadow);
 }
 .avatar {
   margin: -1rem auto;
@@ -119,8 +107,8 @@ h1 {
   translate: -50%;
   padding: 0.5em 1em;
   border-radius: 0.5em;
-  background-color: var(--blue7);
-  color: var(--blue1);
+  background-color: var(--dark-blue);
+  color: var(--light-blue);
   font-size: 0.75rem;
   white-space: nowrap;
   transition: opacity 0.4s;
@@ -133,13 +121,13 @@ h1 {
   margin: 0 auto;
   border-left: 0.375em solid transparent;
   border-right: 0.375em solid transparent;
-  border-top: 0.5em solid var(--blue7);
+  border-top: 0.5em solid var(--dark-blue);
   width: 0;
   height: 0;
 }
 .tooltip:is(:hover, :focus-within) .tooltip-text {
   visibility: visible;
-  opacity: 1;
+  opacity: 0.9;
 }
 @media screen and (min-width: 600px) {
   header {
@@ -172,19 +160,19 @@ h2 {
   max-width: 24rem;
   padding: 0.5rem;
   border-radius: 1rem;
-  background-color: var(--blue2);
+  background-color: var(--light-blue);
   text-align: center;
   font-size: 1rem;
   font-weight: normal;
   text-transform: uppercase;
-  box-shadow: 0 4px var(--blue4);
+  box-shadow: var(--bshadow);
 }
 h2::after {
   display: block;
   content: "";
   margin: auto;
   border-inline: 0.5rem solid transparent;
-  border-top: 0.5rem solid var(--blue7);
+  border-top: 0.5rem solid;
   width: 0;
   height: 0;
 }
@@ -207,15 +195,14 @@ h3 {
   display: flex;
   gap: 0.5rem;
   padding: 0.5rem;
-  background-color: var(--blue2);
+  background-color: var(--light-blue);
   border-radius: 1rem;
-  box-shadow: 0 4px var(--blue4);
-  color: var(--blue7);
-  transition: background-color 0.4s, box-shadow 0.4s;
+  box-shadow: var(--bshadow);
+  color: inherit;
+  transition: background-color 0.4s;
 }
 .project-card:is(:hover, :focus-visible) {
-  background-color: var(--blue3);
-  box-shadow: 0 4px var(--blue5);
+  background-color: var(--light-green);
 }
 .project-card img {
   width: 8rem;
