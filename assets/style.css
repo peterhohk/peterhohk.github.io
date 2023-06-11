@@ -19,12 +19,15 @@ img {
 
 :root {
   --off-white: hsl(210 90% 98%);
+  --very-light-blue: hsl(210 90% 92%);
   --light-blue: hsl(210 90% 82%);
-  --blue: hsl(225 90% 50%);
+  --blue: hsl(225 90% 32%);
   --dark-blue: hsl(240 90% 18%);
-  --light-green: hsl(120 60% 82%);
+  --light-green: hsl(105 60% 68%);
   --green: hsl(120 60% 32%);
-  --bshadow: 0 4px var(--blue);
+  --dark-green: hsl(120 80% 18%);
+  --bshadow-blue: 0 4px var(--blue);
+  --bshadow-green: 0 4px var(--green);
   font-size: 16px;
 }
 body {
@@ -37,7 +40,6 @@ body {
   line-height: 1.5;
 }
 a:where(:link, :visited) {
-  text-decoration: none;
   color: var(--blue);
 }
 a:where(:hover, :focus-visible) {
@@ -61,7 +63,7 @@ header {
   gap: 0.25rem;
   overflow: clip;
   padding: 1rem 0;
-  background-color: color-mix(in srgb, var(--light-blue) 30%, transparent);
+  background-color: var(--very-light-blue);
 }
 header > * {
   flex: 0 0 auto;
@@ -81,7 +83,7 @@ header:is(:hover, :focus-within) .hero-bg {
   padding: 0.5rem;
   background-color: var(--light-blue);
   border-radius: 1rem;
-  box-shadow: var(--bshadow);
+  box-shadow: var(--bshadow-blue);
 }
 .avatar {
   margin: -1rem auto;
@@ -165,7 +167,7 @@ h2 {
   font-size: 1rem;
   font-weight: normal;
   text-transform: uppercase;
-  box-shadow: var(--bshadow);
+  box-shadow: var(--bshadow-blue);
 }
 h2::after {
   display: block;
@@ -197,12 +199,15 @@ h3 {
   padding: 0.5rem;
   background-color: var(--light-blue);
   border-radius: 1rem;
-  box-shadow: var(--bshadow);
+  box-shadow: var(--bshadow-blue);
   color: inherit;
-  transition: background-color 0.4s;
+  text-decoration: none;
+  transition: background-color 0.4s, box-shadow 0.4s, color 0.4s;
 }
 .project-card:is(:hover, :focus-visible) {
   background-color: var(--light-green);
+  box-shadow: var(--bshadow-green);
+  color: var(--dark-green);
 }
 .project-card img {
   width: 8rem;
