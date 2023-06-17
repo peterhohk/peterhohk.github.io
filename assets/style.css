@@ -56,27 +56,31 @@ a:where(:hover, :focus-visible) {
 /* HERO STYLE STARTS */
 
 header {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-areas:
+    "bg-left"
+    "card"
+    "bg-right";
   justify-content: center;
-  align-items: center;
+  place-items: center;
   gap: 0.25rem;
-  overflow: clip;
   padding: 1rem 0;
   background-color: var(--very-light-blue);
 }
-header > * {
-  flex: 0 0 auto;
-}
 .hero-bg {
-  opacity: 0;
+  max-width: min(32rem, 100%);
+  max-height: 16rem;
   filter: drop-shadow(2px 2px 0 var(--light-blue));
   transition: opacity 0.4s;
 }
-header:is(:hover, :focus-within) .hero-bg {
-  opacity: 1;
+.hero-bg-left {
+  grid-area: bg-left;
+}
+.hero-bg-right {
+  grid-area: bg-right;
 }
 .profile-card {
+  grid-area: card;
   display: flex;
   align-items: center;
   width: 24rem;
@@ -88,7 +92,6 @@ header:is(:hover, :focus-within) .hero-bg {
 .avatar {
   margin: -1rem auto;
   width: 8rem;
-  height: 8rem;
 }
 h1 {
   font-size: 2rem;
@@ -133,19 +136,26 @@ h1 {
 }
 @media screen and (min-width: 600px) {
   header {
-    flex-direction: row;
-  }
-  .hero-bg {
-    width: 32rem;
-    height: 16rem;
+    grid-template-areas:
+      "card bg-left"
+      "card bg-right";
+    row-gap: 0;
+    padding: 1rem;
   }
   .profile-card {
     flex-direction: column;
-    width: 16rem;
+    width: 12rem;
   }
   .avatar {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  header {
+    grid-template-areas: "bg-left card bg-right";
+  }
+  .profile-card {
     width: 16rem;
-    height: 16rem;
   }
 }
 
