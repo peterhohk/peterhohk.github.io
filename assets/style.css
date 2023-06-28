@@ -45,7 +45,7 @@ a:where(:link, :visited) {
 a:where(:hover, :focus-visible) {
   color: var(--green);
 }
-@media screen and (min-width: 600px) {
+@media (min-width: 600px) {
   body {
     text-align: center;
   }
@@ -134,7 +134,7 @@ h1 {
   visibility: visible;
   opacity: 0.9;
 }
-@media screen and (min-width: 600px) {
+@media (min-width: 600px) {
   header {
     grid-template-areas:
       "card bg-left"
@@ -150,7 +150,7 @@ h1 {
     width: 100%;
   }
 }
-@media screen and (min-width: 1000px) {
+@media (min-width: 1000px) {
   header {
     grid-template-areas: "bg-left card bg-right";
   }
@@ -238,7 +238,7 @@ h3 {
   border: 1px solid;
   border-radius: 1em;
 }
-@media screen and (min-width: 600px) {
+@media (min-width: 600px) {
   .projects-content {
     grid-template-columns: repeat(auto-fit, 16rem);
   }
