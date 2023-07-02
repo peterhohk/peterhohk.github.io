@@ -189,7 +189,9 @@ h2::after {
   height: 0;
 }
 h3 {
+  margin-block: 1rem;
   font-size: 1.5rem;
+  line-height: 1;
 }
 
 /* CONTENT STYLE ENDS */
