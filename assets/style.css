@@ -189,9 +189,14 @@ h2::after {
   height: 0;
 }
 h3 {
-  margin-block: 1rem;
+  margin-bottom: 0.5rem;
   font-size: 1.5rem;
   line-height: 1;
+}
+@media (min-width: 600px) {
+  h3 {
+    margin-top: 1rem;
+  }
 }
 
 /* CONTENT STYLE ENDS */
@@ -226,6 +231,10 @@ h3 {
   height: 8rem;
   border: 2px solid;
   border-radius: 1rem;
+}
+.project-desc {
+  display: grid;
+  align-content: center;
 }
 .tagcloud {
   display: flex;
