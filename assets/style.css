@@ -12,6 +12,9 @@ img {
   max-width: 100%;
   max-height: 100%;
 }
+ul {
+  list-style: none;
+}
 
 /* RESET ENDS */
 
@@ -37,6 +40,9 @@ body {
   color: var(--dark-blue);
   font-family: "Noto Sans", Helvetica, Arial, sans-serif;
   line-height: 1.25;
+}
+p {
+  margin-top: 0.5rem;
 }
 a:where(:link, :visited) {
   color: var(--blue);
@@ -131,7 +137,11 @@ header {
   font-size: 2rem;
 }
 .profile-links {
+  margin-top: 0.5rem;
   font-size: 1.5rem;
+}
+.profile-links li {
+  display: inline;
 }
 @media (min-width: 36rem) {
   header {
@@ -230,9 +240,6 @@ h3 {
 .project-info {
   display: grid;
   align-content: center;
-}
-.project-desc {
-  margin-top: 0.5rem;
 }
 .project-tagcloud {
   display: flex;
