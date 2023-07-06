@@ -41,6 +41,35 @@ body {
   font-family: "Noto Sans", Helvetica, Arial, sans-serif;
   line-height: 1.25;
 }
+main {
+  display: grid;
+  gap: 1rem;
+}
+h2 {
+  margin: 0 auto 1rem;
+  max-width: 24rem;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  background-color: var(--light-blue);
+  text-align: center;
+  font-size: 1rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  box-shadow: var(--bshadow-blue);
+}
+h2::after {
+  display: block;
+  content: "";
+  margin: auto;
+  border-inline: 0.5rem solid transparent;
+  border-top: 0.5rem solid;
+  width: 0;
+  height: 0;
+}
+h3 {
+  font-size: 1.5rem;
+  line-height: 1;
+}
 p {
   margin-top: 0.5rem;
 }
@@ -93,7 +122,7 @@ a:where(:hover, :focus-visible) {
 
 /* GENERAL STYLE ENDS */
 
-/* HERO STYLE STARTS */
+/* HEADER STYLE STARTS */
 
 header {
   display: grid;
@@ -168,48 +197,14 @@ header {
   }
 }
 
-/* HERO STYLE ENDS */
-
-/* CONTENT STYLE STARTS */
-
-main {
-  display: grid;
-  gap: 1rem;
-}
-h2 {
-  margin: 0 auto 1rem;
-  max-width: 24rem;
-  padding: 0.5rem;
-  border-radius: 1rem;
-  background-color: var(--light-blue);
-  text-align: center;
-  font-size: 1rem;
-  font-weight: normal;
-  text-transform: uppercase;
-  box-shadow: var(--bshadow-blue);
-}
-h2::after {
-  display: block;
-  content: "";
-  margin: auto;
-  border-inline: 0.5rem solid transparent;
-  border-top: 0.5rem solid;
-  width: 0;
-  height: 0;
-}
-h3 {
-  font-size: 1.5rem;
-  line-height: 1;
-}
-
-/* CONTENT STYLE ENDS */
+/* HEADER STYLE ENDS */
 
 /* PROJECTS STYLE STARTS */
 
 .projects-content {
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: stretch;
   gap: 1rem;
   margin-inline: 0.5rem;
 }
@@ -217,6 +212,7 @@ h3 {
   display: flex;
   gap: 1rem;
   padding: 0.5rem;
+  width: 100%;
   background-color: var(--light-blue);
   border-radius: 1rem;
   box-shadow: var(--bshadow-blue);
@@ -254,11 +250,12 @@ h3 {
 }
 @media (min-width: 36rem) {
   .projects-content {
-    grid-template-columns: repeat(auto-fit, 16rem);
+    justify-content: center;
   }
   .project-card {
     flex-direction: column;
     align-items: center;
+    width: 16rem;
   }
   .project-tagcloud {
     justify-content: center;
