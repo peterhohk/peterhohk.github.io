@@ -114,6 +114,23 @@ a:where(:hover, :focus-visible) {
   visibility: visible;
   opacity: 0.9;
 }
+::-webkit-scrollbar {
+  background-color: transparent;
+  width: 0.5rem;
+  height: 0.5rem;
+}
+::-webkit-scrollbar-track, ::-webkit-scrollbar-corner {
+  background-color: var(--off-white);
+}
+::-webkit-scrollbar-thumb {
+  border: 0.0625rem solid transparent;
+  border-radius: 0.25rem;
+  background-color: var(--light-blue);
+  background-clip: padding-box;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--light-green);
+}
 @media (min-width: 36rem) {
   body {
     text-align: center;
