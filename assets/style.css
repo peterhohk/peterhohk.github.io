@@ -12,6 +12,12 @@ img {
   max-width: 100%;
   max-height: 100%;
 }
+svg {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+  vertical-align: bottom;
+}
 ul {
   list-style: none;
 }
@@ -181,11 +187,10 @@ header {
   font-size: 2rem;
 }
 .profile-links {
-  margin-top: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 0.25rem;
   font-size: 1.5rem;
-}
-.profile-links li {
-  display: inline;
 }
 @media (min-width: 36rem) {
   header {
@@ -201,6 +206,9 @@ header {
   }
   .profile-avatar {
     width: 100%;
+  }
+  .profile-links {
+    justify-content: center;
   }
 }
 @media (min-width: 60rem) {
