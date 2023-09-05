@@ -250,8 +250,8 @@ header {
   color: var(--dark-green);
 }
 .project-thumb {
-  width: 8rem;
-  height: 8rem;
+  width: 6rem;
+  aspect-ratio: 1;
   border: 0.125rem solid;
   border-radius: 1rem;
 }
@@ -271,6 +271,11 @@ header {
   padding: 0.125em 0.5em;
   border: 0.0625rem solid;
   border-radius: 1em;
+}
+@media (min-width: 24rem) {
+  .project-thumb {
+    width: 8rem;
+  }
 }
 @media (min-width: 36rem) {
   .projects-content {
