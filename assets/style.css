@@ -75,7 +75,6 @@ h2::after {
 h3 {
   font-size: 1.5rem;
   line-height: 1;
-  margin-block: 0.5em;
 }
 a:where(:link, :visited) {
   color: var(--blue);
@@ -232,9 +231,15 @@ header {
   margin-inline: 0.5rem;
 }
 .project-card {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
+  display: grid;
+  grid-template-areas:
+    "thumb title title"
+    "thumb desc  desc"
+    "thumb date  tagcloud";
+  grid-template-columns: auto 5rem 1fr;
+  grid-template-rows: auto auto 1fr;
+  align-items: start;
+  row-gap: 0.5rem;
   padding: 0.5rem 1rem;
   width: 100%;
   background-color: var(--light-blue);
@@ -250,27 +255,44 @@ header {
   color: var(--dark-green);
 }
 .project-thumb {
+  grid-area: thumb;
+  place-self: center;
   width: 6rem;
   aspect-ratio: 1;
+  margin-right: 0.5rem;
   border: 0.125rem solid;
   border-radius: 1rem;
 }
-.project-info {
-  display: grid;
-  align-content: center;
+.project-title {
+  grid-area: title;
+}
+.project-desc {
+  grid-area: desc;
+}
+.project-date {
+  grid-area: date;
+  padding: 0.125rem 0.5rem;
+  margin-right: 0.25rem;
+  border: 0.0625rem solid;
+  border-bottom-width: 0.125rem;
+  border-radius: 1rem 0 0 1rem;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-align: right;
 }
 .project-tagcloud {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.25em;
-  margin-block: 0.5rem;
-  font-size: 0.75em;
+  grid-area: tagcloud;
+  display: grid;
+  gap: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-align: left;
 }
 .project-tagcloud li {
-  display: inline;
-  padding: 0.125em 0.5em;
+  padding: 0.125rem 0.5rem;
   border: 0.0625rem solid;
-  border-radius: 1em;
+  border-bottom-width: 0.125rem;
+  border-radius: 0 1rem 1rem 0;
 }
 @media (min-width: 24rem) {
   .project-thumb {
@@ -282,12 +304,17 @@ header {
     justify-content: center;
   }
   .project-card {
-    flex-direction: column;
-    gap: 0;
+    grid-template-areas:
+      "thumb thumb"
+      "title title"
+      "desc  desc"
+      "date  tagcloud";
+    grid-template-columns: 5rem 1fr;
+    grid-template-rows: auto auto 1fr auto;
     width: 16rem;
   }
-  .project-tagcloud {
-    justify-content: center;
+  .project-thumb {
+    margin-right: 0;
   }
 }
 
