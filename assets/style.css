@@ -213,6 +213,7 @@ header {
 @media (min-width: 60rem) {
   header {
     grid-template-areas: "bg-left card bg-right";
+    grid-template-columns: 1fr auto 1fr;
   }
   .profile-card {
     width: 16rem;
