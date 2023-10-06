@@ -2,7 +2,7 @@
 
 Peter Ho's personal homepage and portfolio.
 
-## Techs used
+## Tech stack
 
 - HTML & CSS
 
