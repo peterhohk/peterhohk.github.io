@@ -117,6 +117,13 @@ a:where(:hover, :focus-visible) {
   visibility: visible;
   opacity: 0.9;
 }
+.rainbow {
+  animation: rainbow 3s linear infinite;
+}
+@keyframes rainbow {
+  from { filter: hue-rotate(0deg);   }
+  to   { filter: hue-rotate(360deg); }
+}
 ::-webkit-scrollbar {
   background-color: transparent;
   width: 0.5rem;
