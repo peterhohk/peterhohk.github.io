@@ -47,7 +47,7 @@ main {
 }
 h2 {
   margin: 0 auto 1rem;
-  max-width: 24rem;
+  max-width: 12rem;
   padding: 0.5rem;
   border-radius: 1rem;
   background-color: var(--light-blue);
