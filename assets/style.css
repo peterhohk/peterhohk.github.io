@@ -224,14 +224,14 @@ header {
 .project-card {
   display: grid;
   grid-template-areas:
-    "thumb title title"
-    "thumb desc  desc"
-    "thumb date  tagcloud";
-  grid-template-columns: auto 5rem 1fr;
-  grid-template-rows: auto auto 1fr;
+    "thumb title"
+    "thumb date"
+    "thumb desc"
+    "thumb tagcloud";
+  grid-template-columns: auto 1fr;
   align-items: start;
   row-gap: 0.5rem;
-  padding: 0.5rem 1rem;
+  padding: 1rem;
   width: 100%;
   background-color: var(--light-blue);
   border-radius: 1rem;
@@ -257,33 +257,35 @@ header {
 .project-title {
   grid-area: title;
 }
+.project-date {
+  grid-area: date;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+.project-date::before, .project-date::after {
+  content: "";
+  height: 0.0625rem;
+  background-color: currentColor;
+}
 .project-desc {
   grid-area: desc;
 }
-.project-date {
-  grid-area: date;
-  padding: 0.125rem 0.5rem;
-  margin-right: 0.25rem;
-  border: 0.0625rem solid;
-  border-bottom-width: 0.125rem;
-  border-radius: 1rem 0 0 1rem;
-  font-size: 0.75rem;
-  font-weight: bold;
-  text-align: right;
-}
 .project-tagcloud {
   grid-area: tagcloud;
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   gap: 0.25rem;
   font-size: 0.75rem;
-  font-weight: bold;
   text-align: left;
 }
 .project-tagcloud li {
   padding: 0.125rem 0.5rem;
   border: 0.0625rem solid;
-  border-bottom-width: 0.125rem;
-  border-radius: 0 1rem 1rem 0;
+  border-radius: 1rem;
 }
 @media (min-width: 24rem) {
   .project-thumb {
@@ -296,16 +298,20 @@ header {
   }
   .project-card {
     grid-template-areas:
-      "thumb thumb"
-      "title title"
-      "desc  desc"
-      "date  tagcloud";
-    grid-template-columns: 5rem 1fr;
-    grid-template-rows: auto auto 1fr auto;
+      "thumb"
+      "title"
+      "date"
+      "desc"
+      "tagcloud";
+    grid-template-columns: 1fr;
+    align-content: start;
     width: 16rem;
   }
   .project-thumb {
     margin-right: 0;
+  }
+  .project-tagcloud {
+    justify-content: center;
   }
 }
 
