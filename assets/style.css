@@ -229,8 +229,9 @@ header {
     "thumb desc"
     "thumb tagcloud";
   grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto auto 1fr;
   align-items: start;
-  row-gap: 0.5rem;
+  gap: 0.5rem;
   padding: 1rem;
   width: 100%;
   background-color: var(--light-blue);
@@ -250,7 +251,6 @@ header {
   place-self: center;
   width: 6rem;
   aspect-ratio: 1;
-  margin-right: 0.5rem;
   border: 0.125rem solid;
   border-radius: 1rem;
 }
@@ -303,12 +303,10 @@ header {
       "date"
       "desc"
       "tagcloud";
-    grid-template-columns: 1fr;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
     align-content: start;
     width: 16rem;
-  }
-  .project-thumb {
-    margin-right: 0;
   }
   .project-tagcloud {
     justify-content: center;
