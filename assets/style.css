@@ -73,6 +73,11 @@ button {
 :is(a, button):where(:hover, :focus-visible) {
   color: var(--green);
 }
+code {
+  color: var(--dark-green);
+  font-family: "Noto Sans Mono", monospace;
+  font-size: inherit;
+}
 .card {
   padding: 0.5rem;
   background-color: var(--light-blue);
