@@ -93,6 +93,19 @@
       </a>
     </div>
   </section>
+  <section>
+    <h2>Nugget of Wisdom</h2>
+    <div class="wisdom-card card">
+      <div class="wisdom-quote-wrapper">
+        <blockquote class="wisdom-quote"></blockquote>
+      </div>
+      <p>— Peter</p>
+      <span class="tooltip">
+        <button type="button" class="wisdom-generate-btn tooltip-base"><i class="bi bi-lightbulb"></i></button>
+        <span class="tooltip-text">Enlighten me!</span>
+      </span>
+    </div>
+  </section>
 </main>
 
 <footer>(C) 2023 <a href="https://github.com/peterhohk" target="_blank">peterhohk</a></footer>
@@ -103,6 +116,21 @@
   if (recurse >= 42) {
     document.querySelector(".profile-avatar").classList.add("rainbow");
   }
+
+  const wisdoms = [
+    "Always use <code>em</code>, or use <code>em</code>. Never use <code>px</code>.",
+    "Always use <code>let</code>, or use <code>const</code>. Never use <code>var</code>.",
+    "Always use <code>===</code>. Never use <code>==</code>.",
+    "Document your code.",
+    "Take a break. Go for a walk.",
+    "[object Object]",
+    "BLÅHAJ - soft toy, baby shark, 55 cm",
+  ];
+  function enlighten() {
+    document.querySelector(".wisdom-quote").innerHTML = wisdoms[Math.floor(Math.random() * wisdoms.length)];
+  }
+  enlighten();
+  document.querySelector(".wisdom-generate-btn").addEventListener("click", enlighten);
 </script>
 
 </body>

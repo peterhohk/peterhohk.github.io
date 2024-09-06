@@ -61,7 +61,16 @@ h3 {
 a:where(:link, :visited) {
   color: var(--blue);
 }
-a:where(:hover, :focus-visible) {
+button {
+  border: none;
+  background: none;
+  font: inherit;
+  color: inherit;
+  letter-spacing: inherit;
+  word-spacing: inherit;
+  cursor: pointer;
+}
+:is(a, button):where(:hover, :focus-visible) {
   color: var(--green);
 }
 .card {
@@ -300,6 +309,34 @@ header {
 }
 
 /* PROJECTS STYLE ENDS */
+
+/* WISDOM STYLE STARTS */
+
+.wisdom-card {
+  width: calc(100% - 1rem);
+  max-width: 32rem;
+  margin-inline: auto;
+  text-align: center;
+}
+.wisdom-quote-wrapper {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  min-height: 6rem;
+}
+.wisdom-quote-wrapper::before {
+  content: "“ ";
+  font-size: 2rem;
+}
+.wisdom-quote-wrapper::after {
+  content: " ”";
+  font-size: 2rem;
+}
+.wisdom-generate-btn {
+  font-size: 1.5rem;
+}
+
+/* WISDOM STYLE ENDS */
 
 /* FOOTER STYLE STARTS */
 
