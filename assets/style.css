@@ -49,7 +49,7 @@ h2 {
   margin: 0 auto 1rem;
   width: 12rem;
   padding: 0.5rem;
-  border: 0.1875rem double;
+  border-bottom: 0.1875rem double;
   text-align: center;
   font-size: 1rem;
   font-weight: normal;
