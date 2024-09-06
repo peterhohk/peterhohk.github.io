@@ -49,21 +49,10 @@ h2 {
   margin: 0 auto 1rem;
   width: 12rem;
   padding: 0.5rem;
-  border-radius: 1rem;
-  background-color: var(--light-blue);
+  border: 0.1875rem double;
   text-align: center;
   font-size: 1rem;
   font-weight: normal;
-  box-shadow: var(--bshadow-blue);
-}
-h2::after {
-  display: block;
-  content: "";
-  margin: auto;
-  border-inline: 0.5rem solid transparent;
-  border-top: 0.5rem solid;
-  width: 0;
-  height: 0;
 }
 h3 {
   font-size: 1.5rem;
