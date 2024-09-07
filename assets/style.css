@@ -73,11 +73,6 @@ button {
 :is(a, button):where(:hover, :focus-visible) {
   color: var(--green);
 }
-code {
-  color: var(--dark-green);
-  font-family: "Noto Sans Mono", monospace;
-  font-size: inherit;
-}
 .card {
   padding: 0.5rem;
   background-color: var(--light-blue);
@@ -314,34 +309,6 @@ header {
 }
 
 /* PROJECTS STYLE ENDS */
-
-/* WISDOM STYLE STARTS */
-
-.wisdom-card {
-  width: calc(100% - 1rem);
-  max-width: 32rem;
-  margin-inline: auto;
-  text-align: center;
-}
-.wisdom-quote-wrapper {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  align-items: center;
-  min-height: 6rem;
-}
-.wisdom-quote-wrapper::before {
-  content: "“ ";
-  font-size: 2rem;
-}
-.wisdom-quote-wrapper::after {
-  content: " ”";
-  font-size: 2rem;
-}
-.wisdom-generate-btn {
-  font-size: 1.5rem;
-}
-
-/* WISDOM STYLE ENDS */
 
 /* FOOTER STYLE STARTS */
 
