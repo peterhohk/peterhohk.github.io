@@ -22,7 +22,7 @@ ul {
 
 :root {
   --off-white: hsl(210 90% 98%);
-  --very-light-blue: hsl(210 90% 92%);
+  --xlight-blue: hsl(210 90% 92%);
   --light-blue: hsl(210 90% 82%);
   --blue: hsl(225 90% 32%);
   --dark-blue: hsl(240 90% 18%);
@@ -141,7 +141,7 @@ header {
   place-items: center;
   gap: 0.25rem;
   padding: 1rem 0;
-  background-color: var(--very-light-blue);
+  background-color: var(--xlight-blue);
 }
 .hero-bg {
   max-width: min(32rem, 100%);
