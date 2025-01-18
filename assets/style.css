@@ -243,8 +243,7 @@ header {
 }
 .project-title {
   grid-area: title;
-  padding-bottom: 0.5rem;
-  border-bottom: 0.0625rem solid;
+  margin-bottom: 0.5rem;
 }
 .project-desc {
   grid-area: desc;
