@@ -158,7 +158,7 @@
   const recurse = parseInt(new URL(location.href).searchParams.get("recurse")) || 0;
   document.querySelector("[href^='?recurse=']").href = `?recurse=${recurse+1}`;
   if (recurse >= 42) {
-    document.querySelector(".profile-avatar").classList.add("rainbow");
+    document.querySelector(".profile-card__avatar").classList.add("rainbow");
   }
 </script>
 
