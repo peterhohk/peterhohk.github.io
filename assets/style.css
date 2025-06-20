@@ -79,41 +79,6 @@ button {
   border-radius: 1rem;
   box-shadow: var(--bshadow-blue);
 }
-.tooltip {
-  display: inline-block;
-  position: relative;
-}
-.tooltip-text {
-  visibility: hidden;
-  opacity: 0;
-  position: absolute;
-  bottom: calc(100% + 0.25em);
-  left: 50%;
-  translate: -50%;
-  padding: 0.5em 1em;
-  border-radius: 0.5em;
-  background-color: var(--dark-blue);
-  color: var(--light-blue);
-  font-size: 0.75rem;
-  white-space: nowrap;
-  transition: opacity 0.4s;
-}
-.tooltip-text::after {
-  display: block;
-  content: "";
-  position: absolute;
-  inset: 100% 0 0 0;
-  margin: 0 auto;
-  border-left: 0.375em solid transparent;
-  border-right: 0.375em solid transparent;
-  border-top: 0.5em solid var(--dark-blue);
-  width: 0;
-  height: 0;
-}
-.tooltip:is(:hover, :focus-within) .tooltip-text {
-  visibility: visible;
-  opacity: 0.9;
-}
 .rainbow {
   animation: rainbow 3s linear infinite;
 }
@@ -168,11 +133,14 @@ button {
 .profile-card__name {
   font-size: 2rem;
 }
-.profile-card__links {
+.profile-card__link-list {
   display: flex;
   flex-wrap: wrap;
   column-gap: 0.25rem;
-  font-size: 1.5rem;
+  margin-top: 0.25rem;
+}
+.profile-card__link-item:not(:last-child)::after {
+  content: " / ";
 }
 @media (min-width: 36rem) {
   .header {
@@ -189,7 +157,7 @@ button {
   .profile-card__avatar {
     width: 100%;
   }
-  .profile-card__links {
+  .profile-card__link-list {
     justify-content: center;
   }
 }
@@ -250,13 +218,9 @@ button {
 }
 .project-card__meta {
   grid-area: meta;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  column-gap: 0.25rem;
-  font-size: 1.25rem;
-}
-.project-card__date {
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-block: 0.0625rem dotted;
   font-size: 0.75rem;
   font-weight: bold;
 }

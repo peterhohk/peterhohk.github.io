@@ -7,7 +7,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
   <link rel="stylesheet" href="./assets/style.css">
   <title>Peter Ho's Homepage</title>
 </head>
@@ -23,19 +22,9 @@
     <div class="profile-card__content">
       <h1 class="profile-card__name">Peter Ho</h1>
       <p class="profile-card__bio">self-taught front-end developer</p>
-      <ul class="profile-card__links">
-        <li class="tooltip">
-          <a class="tooltop-base" href="?recurse=1">
-            <i class="bi bi-globe"></i>
-          </a>
-          <span class="tooltip-text">Homepage</span>
-        </li>
-        <li class="tooltip">
-          <a class="tooltop-base" href="https://github.com/peterhohk" target="_blank">
-            <i class="bi bi-github"></i>
-          </a>
-          <span class="tooltip-text">GitHub</span>
-        </li>
+      <ul class="profile-card__link-list">
+        <li class="profile-card__link-item"><a href="?recurse=1">Homepage</a></li>
+        <li class="profile-card__link-item"><a href="https://github.com/peterhohk" target="_blank">GitHub</a></li>
       </ul>
     </div>
   </div>
@@ -49,15 +38,10 @@
         <img src="./assets/img/thumb-gallery-v2.png" alt="J-ColourS Gallery v2 thumbnail" class="project-card__thumb">
         <h3 class="project-card__title"><a href="/gallery-v2/">J-ColourS Gallery v2</a></h3>
         <p class="project-card__desc">Gallery page for a personal digital art series, now written in Vue!</p>
-        <ul class="project-card__meta">
-          <li class="project-card__date">Jan 2025</li>
-          <li class="tooltip">
-            <a class="tooltop-base" href="https://github.com/peterhohk/gallery-v2" target="_blank">
-              <i class="bi bi-code-slash"></i>
-            </a>
-            <span class="tooltip-text">View source</span>
-          </li>
-        </ul>
+        <div class="project-card__meta">
+          <span class="project-card__date">Jan 2025</span>
+          <a href="https://github.com/peterhohk/gallery-v2" target="_blank" class="project-card__source-code-link">Source code</a>
+        </div>
         <ul class="project-card__taglist">
           <li class="project-card__tag">html-css</li>
           <li class="project-card__tag">typescript</li>
@@ -74,15 +58,10 @@
         <img src="./assets/img/thumb-breakout.png" alt="Breakout thumbnail" class="project-card__thumb">
         <h3 class="project-card__title"><a href="/breakout/">Breakout</a></h3>
         <p class="project-card__desc">Brick breaking game made with Canvas API</p>
-        <ul class="project-card__meta">
-          <li class="project-card__date">Sep 2023</li>
-          <li class="tooltip">
-            <a class="tooltop-base" href="https://github.com/peterhohk/breakout" target="_blank">
-              <i class="bi bi-code-slash"></i>
-            </a>
-            <span class="tooltip-text">View source</span>
-          </li>
-        </ul>
+        <div class="project-card__meta">
+          <span class="project-card__date">Sep 2023</span>
+          <a href="https://github.com/peterhohk/breakout" target="_blank" class="project-card__source-code-link">Source code</a>
+        </div>
         <ul class="project-card__taglist">
           <li class="project-card__tag">html-css</li>
           <li class="project-card__tag">typescript</li>
@@ -94,15 +73,10 @@
         <img src="./assets/img/thumb-stylestage-seifuku.png" alt="Style Stage: Seifuku thumbnail" class="project-card__thumb">
         <h3 class="project-card__title"><a href="/stylestage-seifuku/">Style Stage: Seifuku</a></h3>
         <p class="project-card__desc">Stylesheet submission to <strong>Style Stage</strong></p>
-        <ul class="project-card__meta">
-          <li class="project-card__date">Jul 2023</li>
-          <li class="tooltip">
-            <a class="tooltop-base" href="https://github.com/peterhohk/stylestage-seifuku" target="_blank">
-              <i class="bi bi-code-slash"></i>
-            </a>
-            <span class="tooltip-text">View source</span>
-          </li>
-        </ul>
+        <div class="project-card__meta">
+          <span class="project-card__date">Jul 2023</span>
+          <a href="https://github.com/peterhohk/stylestage-seifuku" target="_blank" class="project-card__source-code-link">Source code</a>
+        </div>
         <ul class="project-card__taglist">
           <li class="project-card__tag">html-css</li>
           <li class="project-card__tag">web-design</li>
@@ -112,15 +86,10 @@
         <img src="./assets/img/thumb-locate-rgb.png" alt="LocateRGB thumbnail" class="project-card__thumb">
         <h3 class="project-card__title"><a href="/locate-rgb/">LocateRGB</a></h3>
         <p class="project-card__desc">Small game in RGB colour space</p>
-        <ul class="project-card__meta">
-          <li class="project-card__date">May 2023</li>
-          <li class="tooltip">
-            <a class="tooltop-base" href="https://github.com/peterhohk/locate-rgb" target="_blank">
-              <i class="bi bi-code-slash"></i>
-            </a>
-            <span class="tooltip-text">View source</span>
-          </li>
-        </ul>
+        <div class="project-card__meta">
+          <span class="project-card__date">May 2023</span>
+          <a href="https://github.com/peterhohk/locate-rgb" target="_blank" class="project-card__source-code-link">Source code</a>
+        </div>
         <ul class="project-card__taglist">
           <li class="project-card__tag">html-css</li>
           <li class="project-card__tag">javascript</li>
@@ -132,15 +101,10 @@
         <img src="./assets/img/thumb-gallery.png" alt="J-ColourS Gallery thumbnail" class="project-card__thumb">
         <h3 class="project-card__title"><a href="/gallery/">J-ColourS Gallery</a></h3>
         <p class="project-card__desc">Gallery page for a personal digital art series</p>
-        <ul class="project-card__meta">
-          <li class="project-card__date">Mar 2023</li>
-          <li class="tooltip">
-            <a class="tooltop-base" href="https://github.com/peterhohk/gallery" target="_blank">
-              <i class="bi bi-code-slash"></i>
-            </a>
-            <span class="tooltip-text">View source</span>
-          </li>
-        </ul>
+        <div class="project-card__meta">
+          <span class="project-card__date">Mar 2023</span>
+          <a href="https://github.com/peterhohk/gallery" target="_blank" class="project-card__source-code-link">Source code</a>
+        </div>
         <ul class="project-card__taglist">
           <li class="project-card__tag">html-css</li>
           <li class="project-card__tag">javascript</li>
