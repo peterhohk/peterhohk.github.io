@@ -1,8 +1,6 @@
-# Old Homepage
+# Peter Ho's Homepage
 
-Peter Ho's (old) personal homepage.
-
-Kept for archival purposes.
+Peter Ho's personal homepage.
 
 ## Tech stack
 
