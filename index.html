@@ -119,7 +119,7 @@
 <footer class="footer">(C) 2023 <a href="https://github.com/peterhohk" target="_blank">peterhohk</a></footer>
 
 <script>
-  const recurse = parseInt(new URL(location.href).searchParams.get("recurse")) || 0;
+  const recurse = parseInt(new URLSearchParams(location.search).get("recurse")) || 0;
   document.querySelector("[href^='?recurse=']").href = `?recurse=${recurse+1}`;
   if (recurse >= 42) {
     document.querySelector(".profile-card__avatar").classList.add("rainbow");
