@@ -216,18 +216,21 @@ button {
 .project-card__desc {
   grid-area: desc;
 }
-.project-card__meta {
+.project-card__meta-list {
   grid-area: meta;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 0.25rem;
   padding: 0.5rem;
   margin-bottom: 0.5rem;
   border-block: 0.0625rem dotted;
   font-size: 0.75rem;
   font-weight: bold;
 }
-.project-card__date::after {
+.project-card__meta-item:not(:last-child)::after {
   content: " / ";
 }
-.project-card__taglist {
+.project-card__tag-list {
   grid-area: taglist;
   display: flex;
   flex-wrap: wrap;
@@ -235,7 +238,7 @@ button {
   font-size: 0.75rem;
   text-align: left;
 }
-.project-card__tag {
+.project-card__tag-item {
   padding: 0.125rem 0.375rem;
   border: 0.0625rem solid;
   border-radius: 1rem;
@@ -261,8 +264,8 @@ button {
     align-content: start;
     width: 16rem;
   }
-  .project-card__meta,
-  .project-card__taglist {
+  .project-card__meta-list,
+  .project-card__tag-list {
     justify-content: center;
   }
 }
