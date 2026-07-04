@@ -42,16 +42,14 @@ document.addEventListener("DOMContentLoaded", () => {
   // insert info panel content
   const stylesheetLinkHref = createHrefWithParam("stylesheet", selectedStylesheet);
   const stylesheetListHTML = stylesheets.map((stylesheet) => `
-    <li class="info-panel__list-item">
-      <a href="${createHrefWithParam("stylesheet", stylesheet)}" class="info-panel__link">
-        <code class="info-panel__code">${stylesheet}</code>
-      </a>
+    <li class="info-panel__link-item">
+      <a href="${createHrefWithParam("stylesheet", stylesheet)}">${stylesheet}</a>
     </li>
   `).join("");
   document.getElementById("js-stylesheet-name").textContent = selectedStylesheet;
   document.getElementById("js-stylesheet-link").href = stylesheetLinkHref;
   document.getElementById("js-stylesheet-link").textContent = stylesheetLinkHref;
-  document.getElementById("js-stylesheet-list").innerHTML = stylesheetListHTML;
+  document.getElementById("js-stylesheet-link-list").innerHTML = stylesheetListHTML;
 
   // secret!
   const recurseCount = parseInt(new URLSearchParams(location.search).get("recurse")) || 0;

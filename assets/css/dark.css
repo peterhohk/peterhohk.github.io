@@ -321,10 +321,17 @@ code {
 .info-panel__title {
   font-size: 1.5rem;
 }
-.info-panel__list {
+.info-panel__link {
+  font-weight: bold;
+}
+.info-panel__link-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.125rem;
+  column-gap: 0.25rem;
+  font-weight: bold;
+}
+.info-panel__link-item:not(:last-child)::after {
+  content: " / ";
 }
 
 /* INFOPANEL STYLE ENDS */
