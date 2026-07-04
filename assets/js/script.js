@@ -52,9 +52,11 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("js-stylesheet-list").innerHTML = stylesheetListHTML;
 
   // secret!
-  const recurse = parseInt(new URLSearchParams(location.search).get("recurse")) || 0;
-  document.querySelector("[href^='?recurse=']").href = `?recurse=${recurse + 1}`;
-  if (recurse >= 42) {
+  const recurseCount = parseInt(new URLSearchParams(location.search).get("recurse")) || 0;
+  const recurseLinkURL = new URL(location.href);
+  recurseLinkURL.searchParams.set("recurse", recurseCount + 1);
+  document.getElementById("js-recurse-link").href = recurseLinkURL.href;
+  if (recurseCount >= 42) {
     document.body.classList.add("secret-active");
   }
 
