@@ -4,10 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap">
-  <link rel="stylesheet" href="./assets/style.css">
+  <link rel="stylesheet" href="./assets/css/_core.css">
+  <script src="./assets/js/script.js"></script>
   <title>Peter Ho's Homepage</title>
 </head>
 
@@ -22,11 +20,6 @@
     <ul class="profile__link-list">
       <li class="profile__link-item"><a href="?recurse=1">Homepage</a></li>
       <li class="profile__link-item"><a href="https://github.com/peterhohk" target="_blank">GitHub</a></li>
-    </ul>
-    <ul class="profile__tag-list">
-      <li class="profile__tag-item">webdev</li>
-      <li class="profile__tag-item">design</li>
-      <li class="profile__tag-item">art</li>
     </ul>
   </article>
 </header>
@@ -87,7 +80,20 @@
   </section>
 </main>
 
-<footer class="footer">(C) 2023 <a href="https://github.com/peterhohk" target="_blank">peterhohk</a></footer>
+<footer class="footer">
+  <p class="footer__text">(C) 2023 <a href="https://github.com/peterhohk" target="_blank">peterhohk</a></p>
+  <button type="button" popovertarget="info-panel" class="footer__info-button">?</button>
+</footer>
+
+<aside popover id="info-panel" class="info-panel">
+  <h2 class="info-panel__title">What's this?</h2>
+  <p class="info-panel__text">This page loads a random stylesheet every time it's visited. Try refreshing the page!</p>
+  <p class="info-panel__text">Current stylesheet: <code id="js-stylesheet-name" class="info-panel__code"></code></p>
+  <p class="info-panel__text">To specify a stylesheet, use the <code class="info-panel__code">stylesheet</code> parameter:</p>
+  <p class="info-panel__text"><a href="" id="js-stylesheet-link" class="info-panel__link"></a></p>
+  <p class="info-panel__text">Available stylesheets:</p>
+  <ul id="js-stylesheet-list" class="info-panel__list"></ul>
+</aside>
 
 </body>
 

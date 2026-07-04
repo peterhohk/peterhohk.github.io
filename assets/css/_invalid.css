@@ -1,0 +1,16 @@
+@charset "utf-8";
+body::before {
+  content: "You have specified an invalid stylesheet!";
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  width: fit-content;
+  max-width: calc(100% - 2rem);
+  height: fit-content;
+  padding: 1rem;
+  border: 0.25rem solid red;
+  background-color: canvas;
+  color: red;
+  font-size: 2rem;
+  text-align: center;
+}
