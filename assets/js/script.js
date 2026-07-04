@@ -5,6 +5,13 @@ const stylesheets = [
   "dark",
 ];
 
+// helper functions
+function createHrefWithParam(name, value) {
+  const locationURL = new URL(location.href);
+  locationURL.searchParams.set(name, value);
+  return locationURL.href;
+}
+
 // select stylesheet
 const stylesheetParam = new URLSearchParams(location.search).get("stylesheet");
 let selectedStylesheet;
@@ -33,29 +40,23 @@ document.head.appendChild(linkElement);
 document.addEventListener("DOMContentLoaded", () => {
 
   // insert info panel content
-  const stylesheetLinkURL = new URL(location.href);
-  stylesheetLinkURL.searchParams.set("stylesheet", selectedStylesheet);
-  const stylesheetListHTML = stylesheets.map((stylesheet) => {
-    const stylesheetLinkURL = new URL(location.href);
-    stylesheetLinkURL.searchParams.set("stylesheet", stylesheet);
-    return `
-      <li class="info-panel__list-item">
-        <a href="${stylesheetLinkURL.href}" class="info-panel__link">
-          <code class="info-panel__code">${stylesheet}</code>
-        </a>
-      </li>
-    `;
-  }).join("");
+  const stylesheetLinkHref = createHrefWithParam("stylesheet", selectedStylesheet);
+  const stylesheetListHTML = stylesheets.map((stylesheet) => `
+    <li class="info-panel__list-item">
+      <a href="${createHrefWithParam("stylesheet", stylesheet)}" class="info-panel__link">
+        <code class="info-panel__code">${stylesheet}</code>
+      </a>
+    </li>
+  `).join("");
   document.getElementById("js-stylesheet-name").textContent = selectedStylesheet;
-  document.getElementById("js-stylesheet-link").href = stylesheetLinkURL.href;
-  document.getElementById("js-stylesheet-link").textContent = stylesheetLinkURL.href;
+  document.getElementById("js-stylesheet-link").href = stylesheetLinkHref;
+  document.getElementById("js-stylesheet-link").textContent = stylesheetLinkHref;
   document.getElementById("js-stylesheet-list").innerHTML = stylesheetListHTML;
 
   // secret!
   const recurseCount = parseInt(new URLSearchParams(location.search).get("recurse")) || 0;
-  const recurseLinkURL = new URL(location.href);
-  recurseLinkURL.searchParams.set("recurse", recurseCount + 1);
-  document.getElementById("js-recurse-link").href = recurseLinkURL.href;
+  const recurseLinkURL = createHrefWithParam("recurse", recurseCount + 1);
+  document.getElementById("js-recurse-link").href = recurseLinkURL;
   if (recurseCount >= 42) {
     document.body.classList.add("secret-active");
   }
