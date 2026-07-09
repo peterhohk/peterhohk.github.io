@@ -20,7 +20,7 @@ if (stylesheetParam === null) {
 } else if (stylesheets.includes(stylesheetParam)) {
   selectedStylesheet = stylesheetParam;
 } else {
-  selectedStylesheet = "_invalid";
+  selectedStylesheet = "--invalid";
 }
 
 // inject selected stylesheet into document, hiding document until done
