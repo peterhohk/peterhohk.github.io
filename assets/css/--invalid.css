@@ -14,3 +14,8 @@ body::before {
   font-size: 2rem;
   text-align: center;
 }
+[popover] {
+  padding: 1rem;
+  border: 0.25rem solid;
+  background-color: canvas;
+}
