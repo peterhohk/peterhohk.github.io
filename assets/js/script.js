@@ -1,8 +1,8 @@
 "use strict";
 
 const stylesheets = [
-  "classic",
-  "dark",
+  "classic-light",
+  "classic-dark",
 ];
 
 // helper functions
