@@ -57,8 +57,10 @@ section > h2 {
   font-size: 1rem;
   font-weight: normal;
 }
-a {
+a, button {
+  font-weight: bold;
   color: var(--blue-600);
+  text-decoration: underline;
 }
 :is(a, button):where(:hover, :focus-visible) {
   color: var(--green-600);
@@ -144,7 +146,6 @@ code {
   margin-top: 0.25rem;
   border-block: 0.0625rem dotted;
   font-size: 0.75rem;
-  font-weight: bold;
 }
 .profile__link-item:not(:last-child)::after {
   content: " / ";
@@ -249,7 +250,6 @@ code {
   margin-bottom: 0.5rem;
   border-block: 0.0625rem dotted;
   font-size: 0.75rem;
-  font-weight: bold;
 }
 .project-entry__meta-item:not(:last-child)::after {
   content: " / ";
@@ -317,14 +317,10 @@ code {
 .info-panel__title {
   font-size: 1.5rem;
 }
-.info-panel__link {
-  font-weight: bold;
-}
 .info-panel__link-list {
   display: flex;
   flex-wrap: wrap;
   column-gap: 0.25rem;
-  font-weight: bold;
 }
 .info-panel__link-item:not(:last-child)::after {
   content: " / ";
