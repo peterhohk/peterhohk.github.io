@@ -82,13 +82,15 @@
 
 <footer class="footer">
   <p class="footer__text">(C) 2023 <a href="https://github.com/peterhohk" target="_blank">peterhohk</a></p>
-  <button type="button" popovertarget="info-panel" class="footer__info-button">?</button>
+  <p class="footer__info-text">
+    Current stylesheet: <span id="js-stylesheet-name"></span>
+    <button type="button" popovertarget="info-panel" class="footer__info-button">(?)</button>
+  </p>
 </footer>
 
 <aside popover id="info-panel" class="info-panel">
   <h2 class="info-panel__title">What's this?</h2>
   <p class="info-panel__text">This page loads a random stylesheet every time it's visited. Try refreshing the page!</p>
-  <p class="info-panel__text">Current stylesheet: <code id="js-stylesheet-name" class="info-panel__code"></code></p>
   <p class="info-panel__text">To specify a stylesheet, use the <code class="info-panel__code">stylesheet</code> parameter:</p>
   <p class="info-panel__text"><a href="" id="js-stylesheet-link" class="info-panel__link"></a></p>
   <p class="info-panel__text">Available stylesheets:</p>
