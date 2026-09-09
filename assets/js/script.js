@@ -15,14 +15,17 @@ function createHrefWithParam(name, value) {
 
 // select stylesheet
 const stylesheetParam = new URLSearchParams(location.search).get("stylesheet");
+const lastStylesheet = sessionStorage.getItem("lastStylesheet");
 let selectedStylesheet;
 if (stylesheetParam === null) {
-  selectedStylesheet = stylesheets[Math.floor(Math.random() * stylesheets.length)];
+  const eligibleStylesheets = lastStylesheet !== null ? stylesheets.filter((s) => s !== lastStylesheet) : stylesheets;
+  selectedStylesheet = eligibleStylesheets[Math.floor(Math.random() * eligibleStylesheets.length)];
 } else if (stylesheets.includes(stylesheetParam)) {
   selectedStylesheet = stylesheetParam;
 } else {
   selectedStylesheet = "--invalid";
 }
+sessionStorage.setItem("lastStylesheet", selectedStylesheet);
 
 // inject selected stylesheet into document, hiding document until done
 document.documentElement.style.setProperty("visibility", "hidden");
