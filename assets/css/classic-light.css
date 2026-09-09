@@ -27,7 +27,8 @@
 }
 body {
   min-height: 100svh;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 1rem;
   padding-block: 1rem;
   background-color: var(--blue-100);
