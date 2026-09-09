@@ -29,7 +29,7 @@ body {
   min-height: 100svh;
   display: grid;
   gap: 1rem;
-  margin-block: 1rem;
+  padding-block: 1rem;
   background-color: var(--blue-100);
   color: var(--blue-700);
   font-family: "Noto Sans", "Helvetica", "Arial", sans-serif;
