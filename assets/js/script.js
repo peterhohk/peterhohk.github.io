@@ -3,6 +3,7 @@
 const stylesheets = [
   "classic-light",
   "classic-dark",
+  "command-line",
 ];
 
 // helper functions
