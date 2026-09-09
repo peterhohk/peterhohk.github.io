@@ -27,10 +27,9 @@
 }
 body {
   min-height: 100svh;
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: 1rem;
-  padding-block: 1rem;
+  margin-block: 1rem;
   background-color: var(--blue-900);
   color: var(--blue-200);
   font-family: "Noto Sans", "Helvetica", "Arial", sans-serif;
