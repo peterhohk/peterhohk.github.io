@@ -22,8 +22,6 @@
   --green-700: hsl(120 60% 18%);
   --green-800: hsl(120 60% 8%);
   --green-900: hsl(120 60% 2%);
-  --bshadow: 0 0.25rem var(--blue-600);
-  --bshadow-focus: 0 0.25rem var(--green-600);
 }
 body {
   min-height: 100svh;
@@ -124,7 +122,6 @@ code {
   background-color: var(--blue-300);
   border: 0.125rem solid var(--blue-600);
   border-radius: 1rem;
-  box-shadow: var(--bshadow);
 }
 .profile__avatar {
   grid-area: avatar;
@@ -224,7 +221,6 @@ code {
   background-color: var(--blue-300);
   border: 0.125rem solid var(--blue-600);
   border-radius: 1rem;
-  box-shadow: var(--bshadow);
 }
 .project-entry__thumb {
   grid-area: thumb;
@@ -304,7 +300,6 @@ code {
   background-color: var(--blue-300);
   border: 0.125rem solid var(--blue-600);
   border-radius: 0.5rem;
-  box-shadow: var(--bshadow);
 }
 
 /* FOOTER STYLE ENDS */
@@ -319,7 +314,6 @@ code {
   background-color: var(--blue-300);
   border: 0.125rem solid var(--blue-600);
   border-radius: 1rem;
-  box-shadow: var(--bshadow);
 }
 .info-panel__body {
   padding: 1rem;
