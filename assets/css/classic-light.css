@@ -41,19 +41,14 @@ main {
   margin-inline: auto;
 }
 h2 {
-  font-size: 1.75rem;
+  font-size: 1.25rem;
 }
 h3 {
   font-size: 1.5rem;
 }
 section > h2 {
-  margin: 0 auto 1rem;
-  width: 12rem;
-  padding: 0.5rem;
-  border-bottom: 0.1875rem double;
+  margin-bottom: 1rem;
   text-align: center;
-  font-size: 1rem;
-  font-weight: normal;
 }
 a, button {
   font-weight: bold;
@@ -210,6 +205,7 @@ code {
   grid-template-areas:
     "thumb title"
     "thumb desc"
+    "thumb date"
     "thumb links"
     "thumb tags";
   grid-template-columns: auto 1fr;
@@ -239,22 +235,18 @@ code {
   grid-area: desc;
 }
 .project-entry__date {
-  position: absolute;
-  top: -0.75rem;
-  right: 0.5rem;
-  padding: 0.125rem 0.5rem;
-  background-color: var(--blue-300);
-  border: 0.125rem solid var(--blue-600);
-  border-radius: 1rem;
+  grid-area: date;
   font-size: 0.75rem;
-  font-weight: bold;
+}
+.project-entry__date::before {
+  content: "— ";
 }
 .project-entry__link-list {
   grid-area: links;
   display: flex;
   flex-wrap: wrap;
   column-gap: 0.25rem;
-  padding: 0.5rem;
+  padding-block: 0.5rem;
   margin-bottom: 0.5rem;
   border-block: 0.0625rem dotted;
   font-size: 0.75rem;
