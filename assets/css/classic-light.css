@@ -48,6 +48,7 @@ h2 {
 }
 h3 {
   font-size: 1.5rem;
+  line-height: 1;
 }
 section > h2 {
   margin-bottom: 1rem;
@@ -231,7 +232,6 @@ code {
 .project-entry__title {
   grid-area: title;
   margin-bottom: 0.5rem;
-  line-height: 1;
 }
 .project-entry__desc {
   grid-area: desc;
