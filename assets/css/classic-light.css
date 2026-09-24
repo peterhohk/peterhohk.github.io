@@ -279,10 +279,10 @@ code {
 .footer {
   margin-top: auto;
 }
-.footer__text {
+.footer__copyright-info-text {
   text-align: center;
 }
-.footer__info-text {
+.footer__stylesheet-info-text {
   anchor-name: --info-panel-anchor;
   width: fit-content;
   margin-top: 0.5rem;
