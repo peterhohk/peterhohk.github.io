@@ -23,6 +23,7 @@
   --green-700: hsl(120 60% 18%);
   --green-800: hsl(120 60% 8%);
   --green-900: hsl(120 60% 2%);
+  --shadow: 0 0 0.5rem hsl(0 0% 0% / 0.15);
   --fluid-size: clamp(2rem, 1rem + 4.1667vw, 4rem); /* 2rem at 24rem, 4rem at 72rem */
 }
 body {
@@ -109,6 +110,7 @@ code {
 .profile__avatar {
   grid-area: avatar;
   width: min(16rem, 100%);
+  filter: drop-shadow(var(--shadow));
 }
 .profile__name {
   grid-area: name;
@@ -184,6 +186,7 @@ code {
 .project-entry__thumb {
   grid-area: thumb;
   width: min(14rem, 100%);
+  box-shadow: var(--shadow);
 }
 .project-entry__title {
   grid-area: title;
