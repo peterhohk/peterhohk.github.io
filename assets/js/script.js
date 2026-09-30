@@ -4,6 +4,7 @@ const stylesheets = [
   "classic-light",
   "classic-dark",
   "command-line",
+  "whitespace",
 ];
 
 // helper functions
@@ -47,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const stylesheetLinkHref = createHrefWithParam("stylesheet", selectedStylesheet);
   const stylesheetListHTML = stylesheets.map((stylesheet) => `
     <li class="info-panel__link-item">
-      <a href="${createHrefWithParam("stylesheet", stylesheet)}">${stylesheet}</a>
+      <a href="${createHrefWithParam("stylesheet", stylesheet)}" class="info-panel__link">${stylesheet}</a>
     </li>
   `).join("");
   document.getElementById("js-stylesheet-name").textContent = selectedStylesheet;

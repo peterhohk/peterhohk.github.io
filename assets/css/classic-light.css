@@ -203,7 +203,6 @@ code {
   margin-inline: 0.5rem;
 }
 .project-entry {
-  position: relative;
   display: grid;
   grid-template-areas:
     "thumb title"

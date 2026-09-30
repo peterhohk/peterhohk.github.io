@@ -18,8 +18,8 @@
     <h1 class="profile__name">Peter Ho</h1>
     <p class="profile__bio">guy who sometimes does stuff</p>
     <ul class="profile__link-list">
-      <li class="profile__link-item"><a href="" id="js-recurse-link">Homepage</a></li>
-      <li class="profile__link-item"><a href="https://github.com/peterhohk" target="_blank">GitHub</a></li>
+      <li class="profile__link-item"><a href="" id="js-recurse-link" class="profile__link">Homepage</a></li>
+      <li class="profile__link-item"><a href="https://github.com/peterhohk" target="_blank" class="profile__link">GitHub</a></li>
     </ul>
   </article>
 </header>
@@ -32,9 +32,12 @@
         <img src="./assets/img/thumb-gallery-v2.png" alt="J-ColourS Gallery v2 thumbnail" class="project-entry__thumb">
         <h3 class="project-entry__title"><a href="/gallery-v2/">J-ColourS Gallery v2</a></h3>
         <p class="project-entry__desc">Gallery page for a personal digital art series, now written in Vue!</p>
-        <p class="project-entry__date">Jan 2025</p>
+        <p class="project-entry__date">
+          <span class="project-entry__date-month">Jan</span>
+          <span class="project-entry__date-year">2025</span>
+        </p>
         <ul class="project-entry__link-list">
-          <li class="project-entry__link-item"><a href="https://github.com/peterhohk/gallery-v2" target="_blank" class="project-entry__link-item">Source code</a></li>
+          <li class="project-entry__link-item"><a href="https://github.com/peterhohk/gallery-v2" target="_blank" class="project-entry__link">Source code</a></li>
         </ul>
         <ul class="project-entry__tag-list">
           <li class="project-entry__tag-item">html-css</li>
@@ -52,10 +55,13 @@
         <img src="./assets/img/thumb-stylestage-seifuku.png" alt="Style Stage: Seifuku thumbnail" class="project-entry__thumb">
         <h3 class="project-entry__title"><a href="/stylestage-seifuku/">Style Stage: Seifuku</a></h3>
         <p class="project-entry__desc">Stylesheet submission to <strong>Style Stage</strong></p>
-        <p class="project-entry__date">Jul 2023</p>
+        <p class="project-entry__date">
+          <span class="project-entry__date-month">Jul</span>
+          <span class="project-entry__date-year">2023</span>
+        </p>
         <ul class="project-entry__link-list">
-          <li class="project-entry__link-item"><a href="https://stylestage.dev/styles/seifuku/" target="_blank" class="project-entry__link-item">Live site</a></li>
-          <li class="project-entry__link-item"><a href="https://github.com/peterhohk/stylestage-seifuku" target="_blank" class="project-entry__link-item">Source code</a></li>
+          <li class="project-entry__link-item"><a href="https://stylestage.dev/styles/seifuku/" target="_blank" class="project-entry__link">Live site</a></li>
+          <li class="project-entry__link-item"><a href="https://github.com/peterhohk/stylestage-seifuku" target="_blank" class="project-entry__link">Source code</a></li>
         </ul>
         <ul class="project-entry__tag-list">
           <li class="project-entry__tag-item">html-css</li>
@@ -66,9 +72,12 @@
         <img src="./assets/img/thumb-gallery.png" alt="J-ColourS Gallery thumbnail" class="project-entry__thumb">
         <h3 class="project-entry__title"><a href="/gallery/">J-ColourS Gallery</a></h3>
         <p class="project-entry__desc">Gallery page for a personal digital art series</p>
-        <p class="project-entry__date">Mar 2023</p>
+        <p class="project-entry__date">
+          <span class="project-entry__date-month">Mar</span>
+          <span class="project-entry__date-year">2023</span>
+        </p>
         <ul class="project-entry__link-list">
-          <li class="project-entry__link-item"><a href="https://github.com/peterhohk/gallery" target="_blank" class="project-entry__link-item">Source code</a></li>
+          <li class="project-entry__link-item"><a href="https://github.com/peterhohk/gallery" target="_blank" class="project-entry__link">Source code</a></li>
         </ul>
         <ul class="project-entry__tag-list">
           <li class="project-entry__tag-item">html-css</li>
@@ -93,8 +102,8 @@
   <article class="info-panel__body">
     <h2 class="info-panel__title">What's this?</h2>
     <p class="info-panel__text">This page loads a random stylesheet every time it's visited. Try refreshing the page!</p>
-    <p class="info-panel__text">To specify a stylesheet, use the <code class="info-panel__code">stylesheet</code> parameter:</p>
-    <p class="info-panel__text"><a href="" id="js-stylesheet-link" class="info-panel__link"></a></p>
+    <p class="info-panel__text">To specify a stylesheet, use the <code>stylesheet</code> parameter:</p>
+    <p class="info-panel__text"><a href="" id="js-stylesheet-link" class="info-panel__stylesheet-link"></a></p>
     <p class="info-panel__text">Available stylesheets:</p>
     <ul id="js-stylesheet-link-list" class="info-panel__link-list"></ul>
   </article>
