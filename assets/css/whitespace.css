@@ -280,7 +280,7 @@ code {
   justify-content: center;
   gap: 1rem 2rem;
   margin-top: auto;
-  font-size: 1rem;
+  text-align: center;
 }
 
 /* FOOTER STYLE ENDS */
