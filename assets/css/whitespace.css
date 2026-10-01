@@ -57,7 +57,6 @@ h2 {
 }
 h3 {
   font-size: 1.75rem;
-  font-weight: bold;
 }
 section > h2 {
   margin-bottom: var(--fluid-size);
@@ -263,6 +262,7 @@ code {
   padding: 0.5rem;
   padding-left: 1rem;
   background-color: var(--neutral-200);
+  font-size: 0.875rem;
 }
 .project-entry__tag-list::before {
   display: block;
@@ -294,6 +294,9 @@ code {
   .project-entry__thumb {
     margin-left: 1rem;
     align-self: center;
+  }
+  .project-entry__link-list {
+    justify-content: start;
   }
 }
 
