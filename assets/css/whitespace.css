@@ -245,7 +245,8 @@ code {
   height: 0.125rem;
   background-color: var(--green-700);
   z-index: -1;
-  transition: height 0.4s;}
+  transition: height 0.4s;
+}
 .project-entry__link:is(:hover, :focus-visible) {
   color: var(--neutral-100);
 }
