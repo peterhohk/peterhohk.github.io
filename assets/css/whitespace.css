@@ -127,19 +127,31 @@ code {
   gap: 0.5rem;
 }
 .profile__link {
+  position: relative;
   display: inline-block;
   width: 11.5rem;
   height: 100%;
   padding: 0.25rem;
-  border: 0.125rem solid var(--green-700);
-  font-weight: bold;
   text-align: center;
   text-decoration: none;
-  transition: background-color 0.4s, color 0.4s;
+  isolation: isolate;
+  transition: color 0.4s;
+}
+.profile__link::before {
+  position: absolute;
+  inset: auto 0 0 0;
+  display: block;
+  content: "";
+  height: 0.125rem;
+  background-color: var(--green-700);
+  z-index: -1;
+  transition: height 0.4s;
 }
 .profile__link:is(:hover, :focus-visible) {
-  background-color: var(--green-600);
   color: var(--neutral-100);
+}
+.profile__link:is(:hover, :focus-visible)::before {
+  height: 100%;
 }
 @media (min-width: 48rem) {
   .profile {
@@ -215,19 +227,30 @@ code {
   gap: 0.5rem;
 }
 .project-entry__link {
+  position: relative;
   display: inline-block;
   width: 11.5rem;
   height: 100%;
   padding: 0.25rem;
-  border: 0.125rem solid var(--green-700);
-  font-weight: bold;
   text-align: center;
   text-decoration: none;
-  transition: background-color 0.4s, color 0.4s;
+  isolation: isolate;
+  transition: color 0.4s;
 }
+.project-entry__link::before {
+  position: absolute;
+  inset: auto 0 0 0;
+  display: block;
+  content: "";
+  height: 0.125rem;
+  background-color: var(--green-700);
+  z-index: -1;
+  transition: height 0.4s;}
 .project-entry__link:is(:hover, :focus-visible) {
-  background-color: var(--green-600);
   color: var(--neutral-100);
+}
+.project-entry__link:is(:hover, :focus-visible)::before {
+  height: 100%;
 }
 .project-entry__tag-list {
   grid-area: tags;
@@ -311,19 +334,31 @@ code {
   gap: 0.5rem;
 }
 .info-panel__link {
+  position: relative;
   display: inline-block;
   width: 11.5rem;
   height: 100%;
   padding: 0.25rem;
-  border: 0.125rem solid var(--green-700);
-  font-weight: bold;
   text-align: center;
   text-decoration: none;
-  transition: background-color 0.4s, color 0.4s;
+  isolation: isolate;
+  transition: color 0.4s;
+}
+.info-panel__link::before {
+  position: absolute;
+  inset: auto 0 0 0;
+  display: block;
+  content: "";
+  height: 0.125rem;
+  background-color: var(--green-700);
+  z-index: -1;
+  transition: height 0.4s;
 }
 .info-panel__link:is(:hover, :focus-visible) {
-  background-color: var(--green-600);
   color: var(--neutral-100);
+}
+.info-panel__link:is(:hover, :focus-visible)::before {
+  height: 100%;
 }
 
 /* INFOPANEL STYLE ENDS */
