@@ -115,6 +115,15 @@ code {
   overflow: hidden;
   margin-block: 1lh;
 }
+.footer::after {
+  display: block;
+  content: ">";
+  margin-block: 1lh;
+  animation: cursor-blink 1.2s linear infinite;
+}
+@keyframes cursor-blink {
+  to { content: ">_"; }
+}
 
 /* FOOTER STYLE ENDS */
 
