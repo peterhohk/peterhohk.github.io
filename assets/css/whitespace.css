@@ -23,7 +23,7 @@
   --green-700: hsl(120 60% 18%);
   --green-800: hsl(120 60% 8%);
   --green-900: hsl(120 60% 2%);
-  --shadow: 0 0 0.5rem hsl(0 0% 0% / 0.15);
+  --shadow: 0 0 0.5rem alpha(from currentColor / 15%);
   --fluid-size: clamp(2rem, 1rem + 4.1667vw, 4rem); /* 2rem at 24rem, 4rem at 72rem */
 }
 body {
