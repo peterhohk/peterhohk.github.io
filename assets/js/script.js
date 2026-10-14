@@ -1,8 +1,7 @@
 "use strict";
 
 const stylesheets = [
-  "classic-light",
-  "classic-dark",
+  "classic",
   "command-line",
   "whitespace",
 ];
