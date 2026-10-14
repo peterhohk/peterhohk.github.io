@@ -148,7 +148,7 @@ code {
   transition: height 0.4s;
 }
 .profile__link:is(:hover, :focus-visible) {
-  color: light-dark(var(--neutral-100), var(--neutral-900));
+  color: light-dark(var(--neutral-100), var(--neutral-800));
 }
 .profile__link:is(:hover, :focus-visible)::before {
   height: 100%;
@@ -248,7 +248,7 @@ code {
   transition: height 0.4s;
 }
 .project-entry__link:is(:hover, :focus-visible) {
-  color: light-dark(var(--neutral-100), var(--neutral-900));
+  color: light-dark(var(--neutral-100), var(--neutral-800));
 }
 .project-entry__link:is(:hover, :focus-visible)::before {
   height: 100%;
@@ -324,8 +324,8 @@ code {
 .info-panel {
   width: min(32rem, calc(100% - var(--fluid-size)));
   border: 0.25rem solid;
-  background-color: light-dark(var(--neutral-100), var(--neutral-900));
-  box-shadow: 0 0 0 0.25rem light-dark(var(--neutral-100), var(--neutral-900));
+  background-color: light-dark(var(--neutral-100), var(--neutral-800));
+  box-shadow: 0 0 0 0.25rem light-dark(var(--neutral-100), var(--neutral-800));
 }
 .info-panel__body {
   padding: 2rem;
@@ -375,7 +375,7 @@ code {
 }
 .info-panel__link:is(:hover, :focus-visible),
 .info-panel__button:is(:hover, :focus-visible) {
-  color: light-dark(var(--neutral-100), var(--neutral-900));
+  color: light-dark(var(--neutral-100), var(--neutral-800));
 }
 .info-panel__link:is(:hover, :focus-visible)::before,
 .info-panel__button:is(:hover, :focus-visible)::before {
