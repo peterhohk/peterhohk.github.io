@@ -9,9 +9,9 @@
 body {
   width: min(80ch, calc(100% - 2ch));
   margin: 1lh 1ch;
-  background-color: black;
+  background-color: light-dark(white, black);
   font-family: "JetBrains Mono", monospace;
-  color: limegreen;
+  color: light-dark(green, limegreen);
   line-height: 1.5;
 }
 section {
@@ -25,14 +25,14 @@ section > h2::before, section > h2::after {
   font-weight: normal;
 }
 a, button {
-  color: cyan;
+  color: light-dark(blue, cyan);
   text-decoration: underline;
 }
 :is(a, button):where(:hover, :focus-visible) {
-  color: magenta;
+  color: light-dark(magenta, magenta);
 }
 :is(a, button):active {
-  color: red;
+  color: light-dark(red, red);
 }
 img {
   display: none;
@@ -132,7 +132,7 @@ code {
 .info-panel {
   background-color: inherit;
   width: min(calc(62ch + 0.5rem), calc(100% - 2ch));
-  border: 0.25rem solid silver;
+  border: 0.25rem solid light-dark(grey, silver);
   border-top-width: 1.5rem;
   border-radius: 0.25rem;
   overflow: visible;
