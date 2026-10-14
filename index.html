@@ -96,16 +96,39 @@
     Current stylesheet: <span id="js-stylesheet-name"></span>
     <button type="button" popovertarget="info-panel--stylesheet" class="footer__info-button">(?)</button>
   </p>
+  <p class="footer__text footer__text--theme">
+    Current theme: <span id="js-theme-name"></span>
+    <button type="button" popovertarget="info-panel--theme" class="footer__info-button">(?)</button>
+  </p>
 </footer>
 
 <aside popover id="info-panel--stylesheet" class="info-panel info-panel--stylesheet">
   <article class="info-panel__body">
-    <h2 class="info-panel__title">What's this?</h2>
-    <p class="info-panel__text">This page loads a random stylesheet every time it's visited. Try refreshing the page!</p>
+    <h2 class="info-panel__title">Stylesheet switcher</h2>
+    <p class="info-panel__text">This page comes with an assortment of stylesheets, and a random one is loaded every time it's visited. Try refreshing the page!</p>
     <p class="info-panel__text">To specify a stylesheet, use the <code>stylesheet</code> parameter:</p>
     <p class="info-panel__text"><a href="" id="js-stylesheet-link" class="info-panel__stylesheet-link"></a></p>
     <p class="info-panel__text">Available stylesheets:</p>
     <ul id="js-stylesheet-link-list" class="info-panel__link-list"></ul>
+  </article>
+</aside>
+
+<aside popover id="info-panel--theme" class="info-panel info-panel--theme">
+  <article class="info-panel__body">
+    <h2 class="info-panel__title">Theme switcher</h2>
+    <p class="info-panel__text">Each stylesheet has a light theme and a dark theme, chosen automatically based on your system settings.</p>
+    <p class="info-panel__text">To override the theme setting, select one of these options:</p>
+    <ul class="info-panel__button-list">
+      <li class="info-panel__button-item">
+        <button type="button" class="info-panel__button js-theme-switcher-button" data-value="default">default</button>
+      </li>
+      <li class="info-panel__button-item">
+        <button type="button" class="info-panel__button js-theme-switcher-button" data-value="light">light</button>
+      </li>
+      <li class="info-panel__button-item">
+        <button type="button" class="info-panel__button js-theme-switcher-button" data-value="dark">dark</button>
+      </li>
+    </ul>
   </article>
 </aside>
 

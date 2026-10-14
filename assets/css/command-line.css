@@ -155,7 +155,8 @@ code {
   overflow-y: auto;
   overscroll-behavior: contain;
 }
-.info-panel__link-list {
+.info-panel__link-list,
+.info-panel__button-list {
   padding-left: 2ch;
   list-style-type: "- ";
 }

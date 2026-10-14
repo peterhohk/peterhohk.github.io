@@ -12,6 +12,25 @@ function createHrefWithParam(name, value) {
   locationURL.searchParams.set(name, value);
   return locationURL.href;
 }
+function setTheme(newTheme) {
+  activeTheme = newTheme;
+  if (newTheme === "light" || newTheme === "dark") {
+    document.documentElement.dataset.theme = newTheme;
+  } else {
+    delete document.documentElement.dataset.theme;
+  }
+  sessionStorage.setItem("lastTheme", newTheme);
+}
+function updateThemeDisplay() {
+  document.getElementById("js-theme-name").textContent = activeTheme;
+  document.querySelectorAll(".js-theme-switcher-button").forEach((el) => {
+    if (el.dataset.value === activeTheme) {
+      el.dataset.isActive = "";
+    } else {
+      delete el.dataset.isActive;
+    }
+  });
+}
 
 // select stylesheet
 const stylesheetParam = new URLSearchParams(location.search).get("stylesheet");
@@ -40,8 +59,23 @@ linkElement.addEventListener("error", () => {
 });
 document.head.appendChild(linkElement);
 
+// apply theme
+const lastTheme = sessionStorage.getItem("lastTheme") ?? "default";
+let activeTheme = lastTheme;
+setTheme(activeTheme);
+
 // DOMContentLoaded for dom manipulation
 document.addEventListener("DOMContentLoaded", () => {
+
+  // set up theme switcher
+  updateThemeDisplay();
+  document.querySelectorAll(".js-theme-switcher-button").forEach((el) => {
+    el.addEventListener("click", (event) => {
+      const theme = event.target.dataset.value;
+      setTheme(theme);
+      updateThemeDisplay();
+    });
+  });
 
   // insert info panel content
   const stylesheetLinkHref = createHrefWithParam("stylesheet", selectedStylesheet);
