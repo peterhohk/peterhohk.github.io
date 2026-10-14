@@ -91,14 +91,14 @@
 </main>
 
 <footer class="footer">
-  <p class="footer__copyright-info-text">(C) 2023 – 2026 <a href="https://github.com/peterhohk" target="_blank">peterhohk</a></p>
-  <p class="footer__stylesheet-info-text">
+  <p class="footer__text footer__text--copyright">(C) 2023 – 2026 <a href="https://github.com/peterhohk" target="_blank">peterhohk</a></p>
+  <p class="footer__text footer__text--stylesheet">
     Current stylesheet: <span id="js-stylesheet-name"></span>
-    <button type="button" popovertarget="info-panel" class="footer__info-button">(?)</button>
+    <button type="button" popovertarget="info-panel--stylesheet" class="footer__info-button">(?)</button>
   </p>
 </footer>
 
-<aside popover id="info-panel" class="info-panel">
+<aside popover id="info-panel--stylesheet" class="info-panel info-panel--stylesheet">
   <article class="info-panel__body">
     <h2 class="info-panel__title">What's this?</h2>
     <p class="info-panel__text">This page loads a random stylesheet every time it's visited. Try refreshing the page!</p>

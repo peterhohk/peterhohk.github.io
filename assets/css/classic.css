@@ -278,11 +278,11 @@ code {
 .footer {
   margin-top: auto;
 }
-.footer__copyright-info-text {
+.footer__text--copyright {
   text-align: center;
 }
-.footer__stylesheet-info-text {
-  anchor-name: --info-panel-anchor;
+.footer__text--stylesheet {
+  anchor-name: --info-panel-stylesheet-anchor;
   width: fit-content;
   margin-top: 0.5rem;
   margin-left: auto;
@@ -298,13 +298,15 @@ code {
 /* INFOPANEL STYLE STARTS */
 
 .info-panel {
-  position-anchor: --info-panel-anchor;
   position-area: top span-left;
   margin-bottom: 0.5rem;
   width: min(32rem, calc(100% - 0.5rem));
   background-color: light-dark(var(--blue-300), var(--blue-700));
   border: 0.125rem solid light-dark(var(--blue-600), var(--blue-400));
   border-radius: 1rem;
+}
+.info-panel--stylesheet {
+  position-anchor: --info-panel-stylesheet-anchor;
 }
 .info-panel__body {
   padding: 1rem;
