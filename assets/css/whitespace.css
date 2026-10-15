@@ -279,13 +279,13 @@ code {
 @media (min-width: 48rem) {
   .project-entry {
     grid-template-areas:
-      "thumb .     ."
-      "thumb title title"
-      "thumb desc  desc"
-      "thumb links links"
-      "thumb date  tags"
-      "thumb .     .";
-    grid-template-columns: calc(16rem + var(--fluid-size)) 5rem minmax(0, 18.5rem);
+      "thumb . .     ."
+      "thumb . title title"
+      "thumb . desc  desc"
+      "thumb . links links"
+      "thumb . date  tags"
+      "thumb . .     .";
+    grid-template-columns: 16rem var(--fluid-size) 5rem minmax(0, 18.5rem);
     grid-auto-rows: auto;
     justify-content: center;
     justify-items: start;
@@ -293,8 +293,7 @@ code {
     text-align: left;
   }
   .project-entry__thumb {
-    margin-left: 1rem;
-    align-self: center;
+    place-self: center;
   }
   .project-entry__link-list {
     justify-content: start;
