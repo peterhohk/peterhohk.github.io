@@ -17,7 +17,8 @@ body {
 section {
   margin-top: 1lh;
 }
-section > h2::before, section > h2::after {
+section > h2::before,
+section > h2::after {
   display: block;
   content: "====================";
   max-width: round(down, 100%, 1ch);
@@ -46,7 +47,8 @@ code {
 
 /* HEADER STYLE STARTS */
 
-.header::before, .header::after {
+.header::before,
+.header::after {
   display: block;
   content: "################################################################################";
   max-width: round(down, 100%, 1ch);
@@ -72,11 +74,17 @@ code {
   margin-top: 1lh;
   margin-inline: 2ch;
 }
-.project-entry__desc, .project-entry__date, .project-entry__link-list, .project-entry__tag-list {
+.project-entry__desc,
+.project-entry__date,
+.project-entry__link-list,
+.project-entry__tag-list {
   position: relative;
   margin-left: 8ch;
 }
-:is(.project-entry__desc, .project-entry__date, .project-entry__link-list, .project-entry__tag-list)::before {
+.project-entry__desc::before,
+.project-entry__date::before,
+.project-entry__link-list::before,
+.project-entry__tag-list::before {
   position: absolute;
   top: 0;
   left: -8ch;
@@ -97,10 +105,12 @@ code {
 .project-entry__tag-list::before {
   content: "Tags";
 }
-.project-entry__link-item, .project-entry__tag-item {
+.project-entry__link-item,
+.project-entry__tag-item {
   display: inline;
 }
-:is(.project-entry__link-item, .project-entry__tag-item):not(:last-child)::after {
+.project-entry__link-item:not(:last-child)::after,
+.project-entry__tag-item:not(:last-child)::after {
   content: ", "
 }
 
@@ -108,7 +118,8 @@ code {
 
 /* FOOTER STYLE STARTS */
 
-.footer::before, .footer::after {
+.footer::before,
+.footer::after {
   display: block;
   content: "################################################################################";
   max-width: round(down, 100%, 1ch);
@@ -164,7 +175,8 @@ code {
 
 /* SECRET STYLE STARTS */
 
-.secret-active, .secret-active .info-panel {
+.secret-active,
+.secret-active .info-panel {
   rotate: 180deg;
   margin-left: auto;
 }
