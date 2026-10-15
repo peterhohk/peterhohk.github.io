@@ -32,7 +32,8 @@ body {
   flex-direction: column;
   gap: var(--fluid-size);
   width: min(72rem, calc(100% - var(--fluid-size) * 2));
-  margin: var(--fluid-size) auto;
+  padding-block: var(--fluid-size);
+  margin-inline: auto;
   background-color: light-dark(var(--neutral-100), var(--neutral-800));
   color: light-dark(var(--neutral-800), var(--neutral-100));
   font-family: "Andika", "Arial", "Helvetica", sans-serif;

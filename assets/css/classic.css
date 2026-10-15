@@ -28,7 +28,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  margin-block: 1rem;
+  padding-block: 1rem;
   background-color: light-dark(var(--blue-100), var(--blue-900));
   color: light-dark(var(--blue-700), var(--blue-200));
   font-family: "Noto Sans", "Helvetica", "Arial", sans-serif;
