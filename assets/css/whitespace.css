@@ -386,7 +386,7 @@ code {
 
 /* SECRET STYLE STARTS */
 
-.secret-active :is(h1, h2, h3, p) {
+.secret-active * {
   letter-spacing: 1ch;
 }
 
