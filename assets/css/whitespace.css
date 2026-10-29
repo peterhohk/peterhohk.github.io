@@ -30,7 +30,7 @@ body {
   min-height: 100svh;
   display: flex;
   flex-direction: column;
-  gap: var(--fluid-size);
+  gap: 4rem;
   width: min(72rem, calc(100% - var(--fluid-size) * 2));
   padding-block: var(--fluid-size);
   margin-inline: auto;
@@ -42,7 +42,7 @@ body {
 }
 main {
   display: grid;
-  gap: var(--fluid-size);
+  gap: 4rem;
 }
 h1, h2, h3 {
   font-family: "Barlow", "Arial", "Helvetica", sans-serif;
@@ -60,7 +60,7 @@ h3 {
   font-size: 1.75rem;
 }
 section > h2 {
-  margin-bottom: var(--fluid-size);
+  margin-bottom: 4rem;
   text-align: center;
 }
 a, button {
@@ -195,7 +195,7 @@ code {
   text-align: center;
 }
 .project-entry:not(:first-child) {
-  margin-top: var(--fluid-size);
+  margin-top: 4rem;
 }
 .project-entry__thumb {
   grid-area: thumb;
