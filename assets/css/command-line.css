@@ -163,7 +163,6 @@ code {
   padding: 0.5lh 1ch;
   max-height: min(17lh, calc(100svh - 2lh));
   overflow-y: auto;
-  overscroll-behavior: contain;
 }
 .info-panel__link-list,
 .info-panel__button-list {
