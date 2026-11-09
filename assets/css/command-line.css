@@ -134,6 +134,9 @@ code {
 @keyframes cursor-blink {
   to { content: "################################################################################\A\A>_"; }
 }
+.footer__text {
+  margin-inline: 2ch;
+}
 
 /* FOOTER STYLE ENDS */
 
